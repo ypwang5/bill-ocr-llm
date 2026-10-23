@@ -8,6 +8,8 @@
 | D4 | 依赖按步骤加,不一次装齐(目录部分已被 D6 修正) | 2026-10-23 |
 | D5 | schema 提前到合成样本之前(改 PROMPTS.md) | 2026-10-23 |
 | D6 | 目录骨架一次建好,用 `__init__.py` / `.gitkeep` 占位 | 2026-10-23 |
+| D7 | PaddleOCR 关闭 oneDNN(`enable_mkldnn=False`) | 2026-10-23 |
+| 待定 | 弯曲矫正 UVDoc 开不开 → 1.5 用难度样本对照后决定 | 2026-10-23 |
 
 ---
 
@@ -57,3 +59,18 @@
 - **背景**:D4 里我选了"用到哪个目录再建",但 PROMPTS.md 1.2 要求按 CLAUDE.md 建好骨架。
 - **选择**:一次建好。Python 子包放空的 `__init__.py`,数据和输出目录放 `.gitkeep`,因为 git 不记录空目录。
 - **理由**:一开始就能看到项目全貌,和手册保持一致。
+
+## D7 PaddleOCR 关闭 oneDNN
+
+- **背景**:paddleocr 3.7.0 + paddlepaddle 3.3.1(CPU,Windows)用默认参数跑,文本检测推理时报错:
+  `NotImplementedError: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>] (at ...\onednn\onednn_instruction.cc:118)`
+- **怎么定位的**:报错路径里有 `onednn`(Intel CPU 加速库,旧名 MKLDNN)→ 在 paddleocr 源码 `_common_args.py` 里找到 `enable_mkldnn` 开关,关掉后改走 `run_mode="paddle"` → **只改这一个参数**重跑,5 行字全部识别成功,假设成立。
+- **备选**:降级 paddlepaddle 到 3.2.x / 3.0.x(可能没这个 bug,但要多试几个版本,还可能和 paddleocr 3.7 不兼容)
+- **选择**:`PaddleOCR(enable_mkldnn=False)`
+- **代价**:没有 oneDNN 加速,CPU 推理可能慢一些。这张 640×320 的测试图首次 predict 用了 5.8 秒(含预热)。准确的速度留到评估阶段实测,不做猜测。
+
+## 待定:弯曲矫正 UVDoc 开不开
+
+- **发现**:默认开启 `use_doc_unwarping`。在一张平整的合成图上,它反而把图拉变形了:文字画在 x=40,输出坐标却是 x=0;水平的字,框变成了斜的。关掉后坐标是 x≈38~43,和实际一致。
+- **影响**:坐标是"矫正后那张图"上的坐标,不是原图的。1.5 按位置排序、做"关键词右边的值"这类规则时会受影响。
+- **为什么现在不决定**:手机拍照、有透视的样本可能正好需要矫正。1.5 用难度样本对照"开 / 关"的准确率后再定。
