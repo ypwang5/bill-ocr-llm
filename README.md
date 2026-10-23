@@ -52,6 +52,8 @@ uv run uvicorn ocr_extract.api.main:app --port 8000
 # 浏览器打开 http://127.0.0.1:8000 ,上传 data/synthetic/images/ 下任意一张图
 ```
 
+接口和网页里的方案 D 用的是主配置(只用 C 补 B 的空);要用 D-safe,把 `api/main.py` 里的 `HybridExtractor(...)` 加上 `SAFE_CONFIG` 参数。
+
 接口文档:`http://127.0.0.1:8000/docs`。命令行调用:
 
 ```bash
