@@ -1,0 +1,20 @@
+[project]
+name = "ocr-extract"
+version = "0.1.0"
+description = "票据 OCR + 大模型融合信息抽取:对比规则、OCR+LLM、多模态与融合路由四种方案"
+readme = "README.md"
+authors = [
+    { name = "ypwang5", email = "user96313254@gmail.com" }
+]
+# 上限 <3.14:paddlepaddle 3.3.1 只提供到 cp313 的 wheel
+requires-python = ">=3.11,<3.14"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
