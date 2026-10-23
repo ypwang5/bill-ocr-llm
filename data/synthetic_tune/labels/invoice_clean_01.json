@@ -1,0 +1,22 @@
+{
+  "id": "invoice_clean_01",
+  "template": "invoice",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {},
+  "fields": {
+    "payer_name": "澜川信息技术有限公司",
+    "payee_name": "恒岳医疗器械有限公司",
+    "amount": "4.12",
+    "date": "2025-09-22",
+    "serial_no": "58091076217725340839"
+  },
+  "rendered": {
+    "payer_name": "澜川信息技术有限公司",
+    "payee_name": "恒岳医疗器械有限公司",
+    "amount": "RMB 4.12",
+    "date": "2025/09/22",
+    "serial_no": "58091076217725340839"
+  }
+}

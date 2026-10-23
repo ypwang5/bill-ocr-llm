@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_01",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "max_corner_shift": 0.071
+  },
+  "fields": {
+    "payer_name": "星河餐饮管理(杭州)有限公司",
+    "payee_name": "青禾文化传媒有限公司",
+    "amount": "687670.17",
+    "date": "2024-07-27",
+    "serial_no": "30861527358928128320"
+  },
+  "rendered": {
+    "payer_name": "星河餐饮管理（杭州）有限公司",
+    "payee_name": "青禾文化传媒有限公司",
+    "amount": "RMB 687,670.17",
+    "date": "2024年07月27日",
+    "serial_no": "30861527358928128320"
+  }
+}

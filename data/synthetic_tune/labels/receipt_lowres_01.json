@@ -1,0 +1,24 @@
+{
+  "id": "receipt_lowres_01",
+  "template": "receipt",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "scale": 0.44
+  },
+  "fields": {
+    "payer_name": "北辰农业发展(上海)有限公司",
+    "payee_name": "远拓物流有限公司",
+    "amount": "230.79",
+    "date": "2025-04-08",
+    "serial_no": "HX20250408765227"
+  },
+  "rendered": {
+    "payer_name": "北辰农业发展（上海）有限公司",
+    "payee_name": "远拓物流有限公司",
+    "amount": "230.79",
+    "date": "2025-04-08",
+    "serial_no": "HX20250408765227"
+  }
+}

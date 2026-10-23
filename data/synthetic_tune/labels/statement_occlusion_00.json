@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_00",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "嘉澍机械设备有限公司",
+    "payee_name": null,
+    "amount": "84780.09",
+    "date": "2025-01-13",
+    "serial_no": "DZ202501005832"
+  },
+  "rendered": {
+    "payer_name": "嘉澍机械设备有限公司",
+    "payee_name": null,
+    "amount": "84,780.09",
+    "date": "2025/01/13",
+    "serial_no": "DZ202501005832"
+  }
+}

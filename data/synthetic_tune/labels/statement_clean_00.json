@@ -1,0 +1,22 @@
+{
+  "id": "statement_clean_00",
+  "template": "statement",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {},
+  "fields": {
+    "payer_name": "启明物流有限公司",
+    "payee_name": null,
+    "amount": "9988.67",
+    "date": "2024-12-20",
+    "serial_no": "DZ202412983526"
+  },
+  "rendered": {
+    "payer_name": "启明物流有限公司",
+    "payee_name": null,
+    "amount": "9,988.67",
+    "date": "2024/12/20",
+    "serial_no": "DZ202412983526"
+  }
+}

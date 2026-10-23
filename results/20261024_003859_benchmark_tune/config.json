@@ -1,0 +1,21 @@
+{
+  "set": "tune",
+  "scope": "全部",
+  "n": 36,
+  "methods": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reuse": "",
+  "llm": {
+    "base_url": "https://api.deepseek.com",
+    "model_text": "deepseek-flash",
+    "model_vision": "deepseek-flash",
+    "price_text_in": 1.0,
+    "price_text_out": 4.0,
+    "price_vision_in": 1.0,
+    "price_vision_out": 4.0
+  },
+  "use_doc_unwarping": true
+}

@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_00",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "scale": 0.47
+  },
+  "fields": {
+    "payer_name": "朗峰信息技术有限公司",
+    "payee_name": null,
+    "amount": "91.83",
+    "date": "2025-01-26",
+    "serial_no": "DZ202501086752"
+  },
+  "rendered": {
+    "payer_name": "朗峰信息技术有限公司",
+    "payee_name": null,
+    "amount": "¥91.83",
+    "date": "2025年01月26日",
+    "serial_no": "DZ202501086752"
+  }
+}

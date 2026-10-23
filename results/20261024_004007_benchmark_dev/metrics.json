@@ -1,0 +1,740 @@
+{
+  "A": {
+    "all": {
+      "n": 18,
+      "field_acc": {
+        "payer_name": 0.8888888888888888,
+        "payee_name": 0.8888888888888888,
+        "amount": 0.8333333333333334,
+        "date": 0.9444444444444444,
+        "serial_no": 0.9444444444444444
+      },
+      "doc_acc": 0.7777777777777778,
+      "silent_rate": 0.022222222222222223,
+      "null_rate": 0.07777777777777778,
+      "halluc_rate": 0.0,
+      "silent_count": 2,
+      "format_fail_rate": 0.0,
+      "retry_rate": 0.0,
+      "latency_p50": 20.533582549891435,
+      "latency_p95": 25.119867209933,
+      "cost_per_doc": 0.0,
+      "tokens_per_doc": [
+        0.0,
+        0.0
+      ]
+    },
+    "difficulty": {
+      "blur": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 0.6666666666666666,
+          "payee_name": 0.6666666666666666,
+          "amount": 0.6666666666666666,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.13333333333333333,
+        "null_rate": 0.06666666666666667,
+        "halluc_rate": 0.0,
+        "silent_count": 2,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 21.526791000040248,
+        "latency_p95": 22.273837710043882,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "clean": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 19.18277830001898,
+        "latency_p95": 21.14730900984723,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "lowres": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 19.387017499888316,
+        "latency_p95": 19.67011915994808,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "occlusion": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 0.6666666666666666,
+          "payee_name": 0.6666666666666666,
+          "amount": 0.3333333333333333,
+          "date": 0.6666666666666666,
+          "serial_no": 0.6666666666666666
+        },
+        "doc_acc": 0.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.4,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 21.4098559000995,
+        "latency_p95": 24.41545422994532,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "perspective": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 22.4048618999077,
+        "latency_p95": 26.737700489955024,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "rotate": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 22.8350805999944,
+        "latency_p95": 23.966589579894208,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "template": {
+      "invoice": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 0.8333333333333334,
+          "payee_name": 0.8333333333333334,
+          "amount": 0.6666666666666666,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.06666666666666667,
+        "null_rate": 0.06666666666666667,
+        "halluc_rate": 0.0,
+        "silent_count": 2,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 22.59596175001934,
+        "latency_p95": 26.601697649952257,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "receipt": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 0.8333333333333334,
+          "payee_name": 0.8333333333333334,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 0.8333333333333334
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.0,
+        "null_rate": 0.1,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 13.182620199921075,
+        "latency_p95": 14.649320875032572,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      },
+      "statement": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 0.8333333333333334,
+          "date": 0.8333333333333334,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.0,
+        "null_rate": 0.06666666666666667,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 21.468323450069875,
+        "latency_p95": 23.67045007488923,
+        "cost_per_doc": 0.0,
+        "tokens_per_doc": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "B": {
+    "all": {
+      "n": 18,
+      "field_acc": {
+        "payer_name": 0.8888888888888888,
+        "payee_name": 0.8888888888888888,
+        "amount": 1.0,
+        "date": 1.0,
+        "serial_no": 0.9444444444444444
+      },
+      "doc_acc": 0.8888888888888888,
+      "silent_rate": 0.022222222222222223,
+      "null_rate": 0.03333333333333333,
+      "halluc_rate": 0.0,
+      "silent_count": 2,
+      "format_fail_rate": 0.0,
+      "retry_rate": 0.0,
+      "latency_p50": 21.840510849957354,
+      "latency_p95": 29.39646327503142,
+      "cost_per_doc": 0.002037611111111111,
+      "tokens_per_doc": [
+        976.5,
+        265.27777777777777
+      ]
+    },
+    "difficulty": {
+      "blur": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 0.6666666666666666,
+          "payee_name": 0.6666666666666666,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.13333333333333333,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 2,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 22.773793899919838,
+        "latency_p95": 25.05718839991605,
+        "cost_per_doc": 0.0018796666666666666,
+        "tokens_per_doc": [
+          987.6666666666666,
+          223.0
+        ]
+      },
+      "clean": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 20.149846000014804,
+        "latency_p95": 22.624608219985383,
+        "cost_per_doc": 0.0015103333333333334,
+        "tokens_per_doc": [
+          971.6666666666666,
+          134.66666666666666
+        ]
+      },
+      "lowres": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 20.721745599992573,
+        "latency_p95": 20.88867957999464,
+        "cost_per_doc": 0.0019016666666666667,
+        "tokens_per_doc": [
+          952.3333333333334,
+          237.33333333333334
+        ]
+      },
+      "occlusion": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 0.6666666666666666,
+          "payee_name": 0.6666666666666666,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 0.6666666666666666
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.0,
+        "null_rate": 0.2,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 23.604049700079486,
+        "latency_p95": 29.132116190006492,
+        "cost_per_doc": 0.003194666666666667,
+        "tokens_per_doc": [
+          982.6666666666666,
+          553.0
+        ]
+      },
+      "perspective": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 23.1811088998802,
+        "latency_p95": 28.719358260021544,
+        "cost_per_doc": 0.001567,
+        "tokens_per_doc": [
+          977.6666666666666,
+          147.33333333333334
+        ]
+      },
+      "rotate": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 25.168245299952105,
+        "latency_p95": 26.86392981003737,
+        "cost_per_doc": 0.0021723333333333334,
+        "tokens_per_doc": [
+          987.0,
+          296.3333333333333
+        ]
+      }
+    },
+    "template": {
+      "invoice": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 0.8333333333333334,
+          "payee_name": 0.8333333333333334,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.06666666666666667,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 2,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 26.181619049981236,
+        "latency_p95": 29.643439175008098,
+        "cost_per_doc": 0.0027461666666666663,
+        "tokens_per_doc": [
+          994.1666666666666,
+          438.0
+        ]
+      },
+      "receipt": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 0.8333333333333334,
+          "payee_name": 0.8333333333333334,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 0.8333333333333334
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.0,
+        "null_rate": 0.1,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 14.79790789989056,
+        "latency_p95": 15.816944675083505,
+        "cost_per_doc": 0.0016516666666666667,
+        "tokens_per_doc": [
+          922.3333333333334,
+          182.33333333333334
+        ]
+      },
+      "statement": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 22.97745139990002,
+        "latency_p95": 24.77719639998395,
+        "cost_per_doc": 0.0017150000000000002,
+        "tokens_per_doc": [
+          1013.0,
+          175.5
+        ]
+      }
+    }
+  },
+  "C": {
+    "all": {
+      "n": 18,
+      "field_acc": {
+        "payer_name": 0.9444444444444444,
+        "payee_name": 1.0,
+        "amount": 1.0,
+        "date": 0.9444444444444444,
+        "serial_no": 1.0
+      },
+      "doc_acc": 0.8888888888888888,
+      "silent_rate": 0.022222222222222223,
+      "null_rate": 0.0,
+      "halluc_rate": 0.0,
+      "silent_count": 2,
+      "format_fail_rate": 0.0,
+      "retry_rate": 0.0,
+      "latency_p50": 1.5280538499937393,
+      "latency_p95": 2.324362290004501,
+      "cost_per_doc": 0.002166222222222222,
+      "tokens_per_doc": [
+        1255.5555555555557,
+        227.66666666666666
+      ]
+    },
+    "difficulty": {
+      "blur": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 0.6666666666666666,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.06666666666666667,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 1,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.7848256999859586,
+        "latency_p95": 3.0158786399289967,
+        "cost_per_doc": 0.0024783333333333333,
+        "tokens_per_doc": [
+          1189.0,
+          322.3333333333333
+        ]
+      },
+      "clean": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.5784899999853224,
+        "latency_p95": 1.781441980053205,
+        "cost_per_doc": 0.0018729999999999999,
+        "tokens_per_doc": [
+          1189.0,
+          171.0
+        ]
+      },
+      "lowres": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.6818093999754637,
+        "latency_p95": 1.8501570099499076,
+        "cost_per_doc": 0.002081,
+        "tokens_per_doc": [
+          1189.0,
+          223.0
+        ]
+      },
+      "occlusion": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 0.6666666666666666,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.6666666666666666,
+        "silent_rate": 0.06666666666666667,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 1,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.8669785000383854,
+        "latency_p95": 2.1470703800208866,
+        "cost_per_doc": 0.002329,
+        "tokens_per_doc": [
+          1189.0,
+          285.0
+        ]
+      },
+      "perspective": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.2736518000019714,
+        "latency_p95": 1.3225552800111473,
+        "cost_per_doc": 0.002082333333333333,
+        "tokens_per_doc": [
+          1381.0,
+          175.33333333333334
+        ]
+      },
+      "rotate": {
+        "n": 3,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.4706214000470936,
+        "latency_p95": 1.7616634000092746,
+        "cost_per_doc": 0.0021536666666666666,
+        "tokens_per_doc": [
+          1396.3333333333333,
+          189.33333333333334
+        ]
+      }
+    },
+    "template": {
+      "invoice": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 0.8333333333333334,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.03333333333333333,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 1,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.8314318499760702,
+        "latency_p95": 2.909044649946736,
+        "cost_per_doc": 0.002477833333333333,
+        "tokens_per_doc": [
+          1293.1666666666667,
+          296.1666666666667
+        ]
+      },
+      "receipt": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 1.0,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 1.0,
+        "silent_rate": 0.0,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 0,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.24562890001107,
+        "latency_p95": 1.708023699990008,
+        "cost_per_doc": 0.0018361666666666667,
+        "tokens_per_doc": [
+          1160.8333333333333,
+          168.83333333333334
+        ]
+      },
+      "statement": {
+        "n": 6,
+        "field_acc": {
+          "payer_name": 0.8333333333333334,
+          "payee_name": 1.0,
+          "amount": 1.0,
+          "date": 1.0,
+          "serial_no": 1.0
+        },
+        "doc_acc": 0.8333333333333334,
+        "silent_rate": 0.03333333333333333,
+        "null_rate": 0.0,
+        "halluc_rate": 0.0,
+        "silent_count": 1,
+        "format_fail_rate": 0.0,
+        "retry_rate": 0.0,
+        "latency_p50": 1.5762154000112787,
+        "latency_p95": 1.851231925043976,
+        "cost_per_doc": 0.002184666666666667,
+        "tokens_per_doc": [
+          1312.6666666666667,
+          218.0
+        ]
+      }
+    }
+  }
+}

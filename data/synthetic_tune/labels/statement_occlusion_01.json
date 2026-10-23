@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_01",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "远拓贸易(上海)有限公司",
+    "payee_name": null,
+    "amount": "218940.85",
+    "date": "2025-02-13",
+    "serial_no": "DZ202502587004"
+  },
+  "rendered": {
+    "payer_name": "远拓贸易(上海)有限公司",
+    "payee_name": null,
+    "amount": "￥218,940.85",
+    "date": "2025/02/13",
+    "serial_no": "DZ202502587004"
+  }
+}

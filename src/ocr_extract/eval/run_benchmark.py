@@ -17,7 +17,7 @@ from ocr_extract.eval.compare import SETS, SUBSET10, load_labels, run
 from ocr_extract.eval.metrics import FIELDS, compute, grouped
 from ocr_extract.extractors.base import ExtractionResult
 
-NAMES = {"A": "A 规则", "B": "B OCR+LLM", "C": "C 多模态", "D": "D 融合路由"}
+NAMES = {"A": "A 规则", "B": "B OCR+LLM", "C": "C 多模态", "D": "D 融合路由", "Ds": "D-safe(冲突转人工)"}
 
 
 def make_extractor(method: str, reuse: dict[str, list[dict]]) -> Callable[[Path], ExtractionResult]:
@@ -30,9 +30,10 @@ def make_extractor(method: str, reuse: dict[str, list[dict]]) -> Callable[[Path]
     if method == "C":
         from ocr_extract.extractors.vlm_direct import VlmExtractor
         return VlmExtractor().extract
-    if method == "D":
-        from ocr_extract.extractors.hybrid import HybridExtractor
-        return HybridExtractor.from_predictions(reuse).extract if reuse else HybridExtractor().extract
+    if method in ("D", "Ds"):
+        from ocr_extract.extractors.hybrid import SAFE_CONFIG, HybridExtractor, RouteConfig
+        cfg = SAFE_CONFIG if method == "Ds" else RouteConfig()
+        return HybridExtractor.from_predictions(reuse, cfg).extract if reuse else HybridExtractor(cfg).extract
     raise ValueError(method)
 
 
@@ -79,7 +80,7 @@ def report(set_name: str, scope: str, results: dict[str, dict]) -> str:
 
 
 def load_reuse(folder: Path) -> dict[str, list[dict]]:
-    return {p.stem: [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines()] for p in folder.glob("[A-D].jsonl")}
+    return {p.stem: [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines()] for p in folder.glob("*.jsonl")}
 
 
 def main() -> None:
@@ -99,7 +100,7 @@ def main() -> None:
 
     rows, results = {}, {}
     for m in args.methods.split(","):
-        if m in reuse and m != "D":
+        if m in reuse and m not in ("D", "Ds"):
             rows[m] = [r for r in reuse[m] if r["id"] in ids]
         else:
             print(f"运行方案 {m} ...", flush=True)

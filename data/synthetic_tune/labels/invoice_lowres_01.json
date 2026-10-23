@@ -1,0 +1,24 @@
+{
+  "id": "invoice_lowres_01",
+  "template": "invoice",
+  "difficulty": "lowres",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "scale": 0.49
+  },
+  "fields": {
+    "payer_name": "云帆文化传媒(苏州)有限公司",
+    "payee_name": "嘉澍建材有限公司",
+    "amount": "1231.45",
+    "date": "2024-04-15",
+    "serial_no": "68924226649461762355"
+  },
+  "rendered": {
+    "payer_name": "云帆文化传媒（苏州）有限公司",
+    "payee_name": "嘉澍建材有限公司",
+    "amount": "RMB 1,231.45",
+    "date": "2024年04月15日",
+    "serial_no": "68924226649461762355"
+  }
+}

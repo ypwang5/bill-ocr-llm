@@ -1,0 +1,24 @@
+{
+  "id": "receipt_occlusion_00",
+  "template": "receipt",
+  "difficulty": "occlusion",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {
+    "stamp_on": "payee_name"
+  },
+  "fields": {
+    "payer_name": "启明文化传媒有限公司",
+    "payee_name": "远拓信息技术(北京)有限公司",
+    "amount": "6848205.39",
+    "date": "2025-12-05",
+    "serial_no": "HX20251205560955"
+  },
+  "rendered": {
+    "payer_name": "启明文化传媒有限公司",
+    "payee_name": "远拓信息技术（北京）有限公司",
+    "amount": "RMB 6,848,205.39",
+    "date": "2025/12/05",
+    "serial_no": "HX20251205560955"
+  }
+}

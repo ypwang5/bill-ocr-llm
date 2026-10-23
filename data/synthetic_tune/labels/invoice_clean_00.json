@@ -1,0 +1,22 @@
+{
+  "id": "invoice_clean_00",
+  "template": "invoice",
+  "difficulty": "clean",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {},
+  "fields": {
+    "payer_name": "启明机械设备(成都)有限公司",
+    "payee_name": "北辰文化传媒有限公司",
+    "amount": "9299.93",
+    "date": "2024-07-18",
+    "serial_no": "41901621600404134264"
+  },
+  "rendered": {
+    "payer_name": "启明机械设备（成都）有限公司",
+    "payee_name": "北辰文化传媒有限公司",
+    "amount": "9,299.93",
+    "date": "2024/07/18",
+    "serial_no": "41901621600404134264"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "invoice_blur_00",
+  "template": "invoice",
+  "difficulty": "blur",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "blur_radius": 1.7
+  },
+  "fields": {
+    "payer_name": "北辰物流(苏州)有限公司",
+    "payee_name": "星河农业发展有限公司",
+    "amount": "539106.45",
+    "date": "2024-01-13",
+    "serial_no": "92087012216113300475"
+  },
+  "rendered": {
+    "payer_name": "北辰物流（苏州）有限公司",
+    "payee_name": "星河农业发展有限公司",
+    "amount": "539,106.45",
+    "date": "2024/01/13",
+    "serial_no": "92087012216113300475"
+  }
+}

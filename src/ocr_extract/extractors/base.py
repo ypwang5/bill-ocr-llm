@@ -32,6 +32,9 @@ class ExtractionResult:
     # 只有 LLM 方案用:格式校验没过而重试的次数;重试后仍不合格则 format_failed
     retries: int = 0
     format_failed: bool = False
+    # 只有融合方案 D 用:是否回退到了多模态,以及触发回退的信号
+    fallback: bool = False
+    route_reasons: list[str] = field(default_factory=list)
 
 
 def normalize_partial(raw: dict[str, str | None]) -> tuple[dict[str, str | None], dict[str, str]]:

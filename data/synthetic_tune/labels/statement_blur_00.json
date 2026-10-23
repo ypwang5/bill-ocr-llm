@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_00",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "blur_radius": 2.06
+  },
+  "fields": {
+    "payer_name": "澜川餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "8.81",
+    "date": "2025-06-08",
+    "serial_no": "DZ202506005179"
+  },
+  "rendered": {
+    "payer_name": "澜川餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "RMB 8.81",
+    "date": "2025年06月08日",
+    "serial_no": "DZ202506005179"
+  }
+}

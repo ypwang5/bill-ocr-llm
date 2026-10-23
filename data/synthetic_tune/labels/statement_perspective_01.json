@@ -1,0 +1,24 @@
+{
+  "id": "statement_perspective_01",
+  "template": "statement",
+  "difficulty": "perspective",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {
+    "max_corner_shift": 0.078
+  },
+  "fields": {
+    "payer_name": "澜川医疗器械(北京)有限公司",
+    "payee_name": null,
+    "amount": "437.38",
+    "date": "2024-11-06",
+    "serial_no": "DZ202411427689"
+  },
+  "rendered": {
+    "payer_name": "澜川医疗器械（北京）有限公司",
+    "payee_name": null,
+    "amount": "￥437.38",
+    "date": "2024年11月06日",
+    "serial_no": "DZ202411427689"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "invoice_rotate_01",
+  "template": "invoice",
+  "difficulty": "rotate",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "angle": -9.61
+  },
+  "fields": {
+    "payer_name": "星河餐饮管理有限公司",
+    "payee_name": "澜川信息技术(北京)有限公司",
+    "amount": "3388938.57",
+    "date": "2024-03-05",
+    "serial_no": "15383997486642751769"
+  },
+  "rendered": {
+    "payer_name": "星河餐饮管理有限公司",
+    "payee_name": "澜川信息技术（北京）有限公司",
+    "amount": "￥3,388,938.57",
+    "date": "2024-03-05",
+    "serial_no": "15383997486642751769"
+  }
+}

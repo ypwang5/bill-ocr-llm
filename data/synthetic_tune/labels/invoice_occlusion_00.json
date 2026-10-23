@@ -1,0 +1,24 @@
+{
+  "id": "invoice_occlusion_00",
+  "template": "invoice",
+  "difficulty": "occlusion",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {
+    "stamp_on": "payee_name"
+  },
+  "fields": {
+    "payer_name": "启明贸易(苏州)有限公司",
+    "payee_name": "澜川物流(成都)有限公司",
+    "amount": "811008.13",
+    "date": "2025-02-01",
+    "serial_no": "44270385104167253432"
+  },
+  "rendered": {
+    "payer_name": "启明贸易（苏州）有限公司",
+    "payee_name": "澜川物流（成都）有限公司",
+    "amount": "￥811,008.13",
+    "date": "2025年02月01日",
+    "serial_no": "44270385104167253432"
+  }
+}

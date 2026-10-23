@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_00",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "max_corner_shift": 0.076
+  },
+  "fields": {
+    "payer_name": "嘉澍餐饮管理有限公司",
+    "payee_name": "嘉澍科技有限公司",
+    "amount": "2.02",
+    "date": "2026-09-03",
+    "serial_no": "23783199494302419341"
+  },
+  "rendered": {
+    "payer_name": "嘉澍餐饮管理有限公司",
+    "payee_name": "嘉澍科技有限公司",
+    "amount": "2.02",
+    "date": "2026年09月03日",
+    "serial_no": "23783199494302419341"
+  }
+}

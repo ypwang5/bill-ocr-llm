@@ -1,0 +1,22 @@
+{
+  "id": "statement_clean_01",
+  "template": "statement",
+  "difficulty": "clean",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {},
+  "fields": {
+    "payer_name": "北辰机械设备有限公司",
+    "payee_name": null,
+    "amount": "19.48",
+    "date": "2024-11-05",
+    "serial_no": "DZ202411296765"
+  },
+  "rendered": {
+    "payer_name": "北辰机械设备有限公司",
+    "payee_name": null,
+    "amount": "19.48",
+    "date": "2024年11月05日",
+    "serial_no": "DZ202411296765"
+  }
+}

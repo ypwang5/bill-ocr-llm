@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_00",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {},
+  "fields": {
+    "payer_name": "沐阳物流有限公司",
+    "payee_name": "云帆建材有限公司",
+    "amount": "2785.36",
+    "date": "2025-07-26",
+    "serial_no": "HX20250726130414"
+  },
+  "rendered": {
+    "payer_name": "沐阳物流有限公司",
+    "payee_name": "云帆建材有限公司",
+    "amount": "2,785.36",
+    "date": "2025年07月26日",
+    "serial_no": "HX20250726130414"
+  }
+}

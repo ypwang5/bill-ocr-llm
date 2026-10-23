@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_01",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "blur_radius": 1.81
+  },
+  "fields": {
+    "payer_name": "云帆餐饮管理(北京)有限公司",
+    "payee_name": null,
+    "amount": "67287.77",
+    "date": "2025-09-24",
+    "serial_no": "DZ202509365993"
+  },
+  "rendered": {
+    "payer_name": "云帆餐饮管理（北京）有限公司",
+    "payee_name": null,
+    "amount": "￥67,287.77",
+    "date": "2025年09月24日",
+    "serial_no": "DZ202509365993"
+  }
+}

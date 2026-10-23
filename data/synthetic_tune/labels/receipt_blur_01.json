@@ -1,0 +1,24 @@
+{
+  "id": "receipt_blur_01",
+  "template": "receipt",
+  "difficulty": "blur",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "blur_radius": 2.12
+  },
+  "fields": {
+    "payer_name": "沐阳信息技术(杭州)有限公司",
+    "payee_name": "启明科技(杭州)有限公司",
+    "amount": "1217120.63",
+    "date": "2026-09-27",
+    "serial_no": "HX20260927547594"
+  },
+  "rendered": {
+    "payer_name": "沐阳信息技术（杭州）有限公司",
+    "payee_name": "启明科技（杭州）有限公司",
+    "amount": "¥1,217,120.63",
+    "date": "2026-09-27",
+    "serial_no": "HX20260927547594"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "invoice_blur_01",
+  "template": "invoice",
+  "difficulty": "blur",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {
+    "blur_radius": 2.22
+  },
+  "fields": {
+    "payer_name": "恒岳信息技术(武汉)有限公司",
+    "payee_name": "锦程科技有限公司",
+    "amount": "742134.29",
+    "date": "2024-02-19",
+    "serial_no": "27366544239193226370"
+  },
+  "rendered": {
+    "payer_name": "恒岳信息技术(武汉)有限公司",
+    "payee_name": "锦程科技有限公司",
+    "amount": "RMB 742,134.29",
+    "date": "2024年02月19日",
+    "serial_no": "27366544239193226370"
+  }
+}

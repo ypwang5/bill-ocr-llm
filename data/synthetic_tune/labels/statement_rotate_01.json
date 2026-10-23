@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_01",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "msyh",
+  "seed": 99,
+  "degrade": {
+    "angle": -7.65
+  },
+  "fields": {
+    "payer_name": "嘉澍文化传媒(成都)有限公司",
+    "payee_name": null,
+    "amount": "19.11",
+    "date": "2026-02-03",
+    "serial_no": "DZ202602848526"
+  },
+  "rendered": {
+    "payer_name": "嘉澍文化传媒(成都)有限公司",
+    "payee_name": null,
+    "amount": "19.11",
+    "date": "2026年02月03日",
+    "serial_no": "DZ202602848526"
+  }
+}

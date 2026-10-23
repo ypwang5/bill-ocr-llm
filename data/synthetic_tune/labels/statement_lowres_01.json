@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_01",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "scale": 0.49
+  },
+  "fields": {
+    "payer_name": "恒岳机械设备(苏州)有限公司",
+    "payee_name": null,
+    "amount": "4789.87",
+    "date": "2025-12-28",
+    "serial_no": "DZ202512530588"
+  },
+  "rendered": {
+    "payer_name": "恒岳机械设备（苏州）有限公司",
+    "payee_name": null,
+    "amount": "￥4,789.87",
+    "date": "2025年12月28日",
+    "serial_no": "DZ202512530588"
+  }
+}

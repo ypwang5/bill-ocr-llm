@@ -1,0 +1,24 @@
+{
+  "id": "receipt_rotate_01",
+  "template": "receipt",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 99,
+  "degrade": {
+    "angle": -11.05
+  },
+  "fields": {
+    "payer_name": "启明医疗器械(北京)有限公司",
+    "payee_name": "启明餐饮管理有限公司",
+    "amount": "48076.63",
+    "date": "2026-10-08",
+    "serial_no": "HX20261008098909"
+  },
+  "rendered": {
+    "payer_name": "启明医疗器械(北京)有限公司",
+    "payee_name": "启明餐饮管理有限公司",
+    "amount": "48,076.63",
+    "date": "2026-10-08",
+    "serial_no": "HX20261008098909"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_00",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "simsun",
+  "seed": 99,
+  "degrade": {
+    "angle": -12.78
+  },
+  "fields": {
+    "payer_name": "恒岳机械设备(苏州)有限公司",
+    "payee_name": null,
+    "amount": "157744.14",
+    "date": "2024-06-15",
+    "serial_no": "DZ202406929528"
+  },
+  "rendered": {
+    "payer_name": "恒岳机械设备（苏州）有限公司",
+    "payee_name": null,
+    "amount": "￥157,744.14",
+    "date": "2024-06-15",
+    "serial_no": "DZ202406929528"
+  }
+}
