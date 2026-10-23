@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_00",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {
+    "max_corner_shift": 0.116
+  },
+  "fields": {
+    "payer_name": "嘉澍农业发展(北京)有限公司",
+    "payee_name": "沐阳物流有限公司",
+    "amount": "6550757.28",
+    "date": "2024-04-19",
+    "serial_no": "45818717246464870614"
+  },
+  "rendered": {
+    "payer_name": "嘉澍农业发展（北京）有限公司",
+    "payee_name": "沐阳物流有限公司",
+    "amount": "￥6,550,757.28",
+    "date": "2024年04月19日",
+    "serial_no": "45818717246464870614"
+  }
+}

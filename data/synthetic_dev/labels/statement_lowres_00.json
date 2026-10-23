@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_00",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {
+    "scale": 0.36
+  },
+  "fields": {
+    "payer_name": "云帆建材(上海)有限公司",
+    "payee_name": null,
+    "amount": "16.35",
+    "date": "2024-11-19",
+    "serial_no": "DZ202411345805"
+  },
+  "rendered": {
+    "payer_name": "云帆建材（上海）有限公司",
+    "payee_name": null,
+    "amount": "¥16.35",
+    "date": "2024/11/19",
+    "serial_no": "DZ202411345805"
+  }
+}

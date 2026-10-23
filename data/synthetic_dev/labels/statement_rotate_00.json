@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_00",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "simsun",
+  "seed": 7,
+  "degrade": {
+    "angle": 11.68
+  },
+  "fields": {
+    "payer_name": "云帆物流有限公司",
+    "payee_name": null,
+    "amount": "3916.40",
+    "date": "2026-10-06",
+    "serial_no": "DZ202610117467"
+  },
+  "rendered": {
+    "payer_name": "云帆物流有限公司",
+    "payee_name": null,
+    "amount": "RMB 3,916.40",
+    "date": "2026-10-06",
+    "serial_no": "DZ202610117467"
+  }
+}

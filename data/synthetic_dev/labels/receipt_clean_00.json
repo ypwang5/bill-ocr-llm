@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_00",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 7,
+  "degrade": {},
+  "fields": {
+    "payer_name": "沐阳科技有限公司",
+    "payee_name": "朗峰物流有限公司",
+    "amount": "332.54",
+    "date": "2025-11-30",
+    "serial_no": "HX20251130375711"
+  },
+  "rendered": {
+    "payer_name": "沐阳科技有限公司",
+    "payee_name": "朗峰物流有限公司",
+    "amount": "￥332.54",
+    "date": "2025/11/30",
+    "serial_no": "HX20251130375711"
+  }
+}

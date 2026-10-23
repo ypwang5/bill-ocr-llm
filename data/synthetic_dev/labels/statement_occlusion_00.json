@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_00",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "simsun",
+  "seed": 7,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "沐阳科技有限公司",
+    "payee_name": null,
+    "amount": "220957.09",
+    "date": "2025-08-16",
+    "serial_no": "DZ202508138401"
+  },
+  "rendered": {
+    "payer_name": "沐阳科技有限公司",
+    "payee_name": null,
+    "amount": "RMB 220,957.09",
+    "date": "2025-08-16",
+    "serial_no": "DZ202508138401"
+  }
+}

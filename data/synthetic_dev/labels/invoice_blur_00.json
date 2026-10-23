@@ -1,0 +1,24 @@
+{
+  "id": "invoice_blur_00",
+  "template": "invoice",
+  "difficulty": "blur",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {
+    "blur_radius": 2.41
+  },
+  "fields": {
+    "payer_name": "澜川医疗器械(杭州)有限公司",
+    "payee_name": "北辰科技有限公司",
+    "amount": "2297511.20",
+    "date": "2024-08-21",
+    "serial_no": "55171856148947879225"
+  },
+  "rendered": {
+    "payer_name": "澜川医疗器械（杭州）有限公司",
+    "payee_name": "北辰科技有限公司",
+    "amount": "RMB 2,297,511.20",
+    "date": "2024/08/21",
+    "serial_no": "55171856148947879225"
+  }
+}

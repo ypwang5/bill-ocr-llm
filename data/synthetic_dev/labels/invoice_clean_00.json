@@ -1,0 +1,22 @@
+{
+  "id": "invoice_clean_00",
+  "template": "invoice",
+  "difficulty": "clean",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {},
+  "fields": {
+    "payer_name": "嘉澍物流有限公司",
+    "payee_name": "沐阳科技(成都)有限公司",
+    "amount": "91057.12",
+    "date": "2024-03-02",
+    "serial_no": "94531136820706537511"
+  },
+  "rendered": {
+    "payer_name": "嘉澍物流有限公司",
+    "payee_name": "沐阳科技（成都）有限公司",
+    "amount": "RMB 91,057.12",
+    "date": "2024-03-02",
+    "serial_no": "94531136820706537511"
+  }
+}

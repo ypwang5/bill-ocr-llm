@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_00",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "simhei",
+  "seed": 7,
+  "degrade": {
+    "blur_radius": 1.51
+  },
+  "fields": {
+    "payer_name": "云帆医疗器械有限公司",
+    "payee_name": null,
+    "amount": "711428.79",
+    "date": "2024-08-12",
+    "serial_no": "DZ202408980459"
+  },
+  "rendered": {
+    "payer_name": "云帆医疗器械有限公司",
+    "payee_name": null,
+    "amount": "￥711,428.79",
+    "date": "2024/08/12",
+    "serial_no": "DZ202408980459"
+  }
+}

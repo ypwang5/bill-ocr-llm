@@ -1,0 +1,24 @@
+{
+  "id": "invoice_rotate_00",
+  "template": "invoice",
+  "difficulty": "rotate",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {
+    "angle": 13.31
+  },
+  "fields": {
+    "payer_name": "朗峰医疗器械(武汉)有限公司",
+    "payee_name": "澜川信息技术(苏州)有限公司",
+    "amount": "11717.88",
+    "date": "2024-01-29",
+    "serial_no": "05456987332913272340"
+  },
+  "rendered": {
+    "payer_name": "朗峰医疗器械(武汉)有限公司",
+    "payee_name": "澜川信息技术(苏州)有限公司",
+    "amount": "¥11,717.88",
+    "date": "2024年01月29日",
+    "serial_no": "05456987332913272340"
+  }
+}

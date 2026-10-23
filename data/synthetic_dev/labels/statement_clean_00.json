@@ -1,0 +1,22 @@
+{
+  "id": "statement_clean_00",
+  "template": "statement",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 7,
+  "degrade": {},
+  "fields": {
+    "payer_name": "北辰餐饮管理(杭州)有限公司",
+    "payee_name": null,
+    "amount": "2101502.74",
+    "date": "2025-01-07",
+    "serial_no": "DZ202501522327"
+  },
+  "rendered": {
+    "payer_name": "北辰餐饮管理(杭州)有限公司",
+    "payee_name": null,
+    "amount": "2,101,502.74",
+    "date": "2025/01/07",
+    "serial_no": "DZ202501522327"
+  }
+}

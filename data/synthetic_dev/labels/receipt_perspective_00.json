@@ -1,0 +1,24 @@
+{
+  "id": "receipt_perspective_00",
+  "template": "receipt",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 7,
+  "degrade": {
+    "max_corner_shift": 0.09
+  },
+  "fields": {
+    "payer_name": "云帆贸易有限公司",
+    "payee_name": "锦程机械设备有限公司",
+    "amount": "101.70",
+    "date": "2024-10-13",
+    "serial_no": "HX20241013753891"
+  },
+  "rendered": {
+    "payer_name": "云帆贸易有限公司",
+    "payee_name": "锦程机械设备有限公司",
+    "amount": "￥101.70",
+    "date": "2024-10-13",
+    "serial_no": "HX20241013753891"
+  }
+}

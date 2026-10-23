@@ -1,0 +1,24 @@
+{
+  "id": "receipt_rotate_00",
+  "template": "receipt",
+  "difficulty": "rotate",
+  "font": "msyh",
+  "seed": 7,
+  "degrade": {
+    "angle": -14.0
+  },
+  "fields": {
+    "payer_name": "沐阳贸易有限公司",
+    "payee_name": "远拓医疗器械(杭州)有限公司",
+    "amount": "5671686.72",
+    "date": "2024-04-04",
+    "serial_no": "HX20240404571933"
+  },
+  "rendered": {
+    "payer_name": "沐阳贸易有限公司",
+    "payee_name": "远拓医疗器械（杭州）有限公司",
+    "amount": "￥5,671,686.72",
+    "date": "2024-04-04",
+    "serial_no": "HX20240404571933"
+  }
+}
