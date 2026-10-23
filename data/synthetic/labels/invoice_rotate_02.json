@@ -1,0 +1,24 @@
+{
+  "id": "invoice_rotate_02",
+  "template": "invoice",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "angle": -5.86
+  },
+  "fields": {
+    "payer_name": "恒岳医疗器械有限公司",
+    "payee_name": "锦程物流(上海)有限公司",
+    "amount": "3.32",
+    "date": "2026-07-22",
+    "serial_no": "08413999047673334064"
+  },
+  "rendered": {
+    "payer_name": "恒岳医疗器械有限公司",
+    "payee_name": "锦程物流(上海)有限公司",
+    "amount": "3.32",
+    "date": "2026-07-22",
+    "serial_no": "08413999047673334064"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "receipt_rotate_00",
+  "template": "receipt",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "angle": 5.08
+  },
+  "fields": {
+    "payer_name": "北辰机械设备(上海)有限公司",
+    "payee_name": "嘉澍物流(成都)有限公司",
+    "amount": "158870.82",
+    "date": "2025-06-04",
+    "serial_no": "HX20250604788264"
+  },
+  "rendered": {
+    "payer_name": "北辰机械设备（上海）有限公司",
+    "payee_name": "嘉澍物流(成都)有限公司",
+    "amount": "RMB 158,870.82",
+    "date": "2025-06-04",
+    "serial_no": "HX20250604788264"
+  }
+}

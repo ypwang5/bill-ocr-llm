@@ -1,0 +1,24 @@
+{
+  "id": "statement_perspective_02",
+  "template": "statement",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.091
+  },
+  "fields": {
+    "payer_name": "沐阳信息技术有限公司",
+    "payee_name": null,
+    "amount": "79.18",
+    "date": "2024-12-08",
+    "serial_no": "DZ202412154498"
+  },
+  "rendered": {
+    "payer_name": "沐阳信息技术有限公司",
+    "payee_name": null,
+    "amount": "￥79.18",
+    "date": "2024/12/08",
+    "serial_no": "DZ202412154498"
+  }
+}

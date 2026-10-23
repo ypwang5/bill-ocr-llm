@@ -1,0 +1,24 @@
+{
+  "id": "receipt_perspective_02",
+  "template": "receipt",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.119
+  },
+  "fields": {
+    "payer_name": "云帆机械设备(武汉)有限公司",
+    "payee_name": "青禾科技(北京)有限公司",
+    "amount": "77331.51",
+    "date": "2025-01-16",
+    "serial_no": "HX20250116259536"
+  },
+  "rendered": {
+    "payer_name": "云帆机械设备(武汉)有限公司",
+    "payee_name": "青禾科技(北京)有限公司",
+    "amount": "¥77,331.51",
+    "date": "2025/01/16",
+    "serial_no": "HX20250116259536"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_03",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "angle": 12.08
+  },
+  "fields": {
+    "payer_name": "澜川餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "52.10",
+    "date": "2025-08-09",
+    "serial_no": "DZ202508136720"
+  },
+  "rendered": {
+    "payer_name": "澜川餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "52.10",
+    "date": "2025-08-09",
+    "serial_no": "DZ202508136720"
+  }
+}

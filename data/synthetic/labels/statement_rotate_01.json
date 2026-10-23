@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_01",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "angle": -12.99
+  },
+  "fields": {
+    "payer_name": "澜川文化传媒有限公司",
+    "payee_name": null,
+    "amount": "9424691.52",
+    "date": "2026-01-19",
+    "serial_no": "DZ202601529382"
+  },
+  "rendered": {
+    "payer_name": "澜川文化传媒有限公司",
+    "payee_name": null,
+    "amount": "9,424,691.52",
+    "date": "2026-01-19",
+    "serial_no": "DZ202601529382"
+  }
+}

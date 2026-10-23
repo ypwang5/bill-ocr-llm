@@ -9,8 +9,10 @@ authors = [
 # 上限 <3.14:paddlepaddle 3.3.1 只提供到 cp313 的 wheel
 requires-python = ">=3.11,<3.14"
 dependencies = [
+    "numpy>=2.3.5",
     "paddleocr>=3.7.0",
     "paddlepaddle>=3.3.1",
+    "pillow>=13.0.0",
     "pydantic>=2.14.1",
 ]
 

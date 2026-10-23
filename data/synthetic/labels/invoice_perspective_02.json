@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_02",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.056
+  },
+  "fields": {
+    "payer_name": "云帆农业发展(武汉)有限公司",
+    "payee_name": "北辰餐饮管理有限公司",
+    "amount": "12.22",
+    "date": "2025-09-03",
+    "serial_no": "53582686185682342629"
+  },
+  "rendered": {
+    "payer_name": "云帆农业发展(武汉)有限公司",
+    "payee_name": "北辰餐饮管理有限公司",
+    "amount": "12.22",
+    "date": "2025-09-03",
+    "serial_no": "53582686185682342629"
+  }
+}

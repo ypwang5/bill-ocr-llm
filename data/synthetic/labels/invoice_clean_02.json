@@ -1,0 +1,22 @@
+{
+  "id": "invoice_clean_02",
+  "template": "invoice",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "澜川农业发展有限公司",
+    "payee_name": "星河物流有限公司",
+    "amount": "1.24",
+    "date": "2026-07-25",
+    "serial_no": "53113042815471519149"
+  },
+  "rendered": {
+    "payer_name": "澜川农业发展有限公司",
+    "payee_name": "星河物流有限公司",
+    "amount": "RMB 1.24",
+    "date": "2026/07/25",
+    "serial_no": "53113042815471519149"
+  }
+}

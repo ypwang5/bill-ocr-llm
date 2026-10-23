@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_01",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 2.24
+  },
+  "fields": {
+    "payer_name": "恒岳信息技术(杭州)有限公司",
+    "payee_name": null,
+    "amount": "1633406.45",
+    "date": "2024-01-15",
+    "serial_no": "DZ202401863089"
+  },
+  "rendered": {
+    "payer_name": "恒岳信息技术（杭州）有限公司",
+    "payee_name": null,
+    "amount": "RMB 1,633,406.45",
+    "date": "2024/01/15",
+    "serial_no": "DZ202401863089"
+  }
+}

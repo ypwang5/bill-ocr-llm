@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_01",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.44
+  },
+  "fields": {
+    "payer_name": "恒岳农业发展(上海)有限公司",
+    "payee_name": null,
+    "amount": "505.92",
+    "date": "2025-03-14",
+    "serial_no": "DZ202503375204"
+  },
+  "rendered": {
+    "payer_name": "恒岳农业发展(上海)有限公司",
+    "payee_name": null,
+    "amount": "RMB 505.92",
+    "date": "2025-03-14",
+    "serial_no": "DZ202503375204"
+  }
+}

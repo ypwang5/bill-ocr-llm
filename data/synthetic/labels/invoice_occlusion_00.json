@@ -1,0 +1,24 @@
+{
+  "id": "invoice_occlusion_00",
+  "template": "invoice",
+  "difficulty": "occlusion",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "payee_name"
+  },
+  "fields": {
+    "payer_name": "青禾医疗器械(北京)有限公司",
+    "payee_name": "星河科技(苏州)有限公司",
+    "amount": "6.09",
+    "date": "2026-05-02",
+    "serial_no": "85328150830608884872"
+  },
+  "rendered": {
+    "payer_name": "青禾医疗器械(北京)有限公司",
+    "payee_name": "星河科技(苏州)有限公司",
+    "amount": "¥6.09",
+    "date": "2026-05-02",
+    "serial_no": "85328150830608884872"
+  }
+}

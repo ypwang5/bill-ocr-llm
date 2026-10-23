@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_03",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.44
+  },
+  "fields": {
+    "payer_name": "锦程科技有限公司",
+    "payee_name": null,
+    "amount": "23.49",
+    "date": "2024-11-04",
+    "serial_no": "DZ202411500141"
+  },
+  "rendered": {
+    "payer_name": "锦程科技有限公司",
+    "payee_name": null,
+    "amount": "RMB 23.49",
+    "date": "2024-11-04",
+    "serial_no": "DZ202411500141"
+  }
+}

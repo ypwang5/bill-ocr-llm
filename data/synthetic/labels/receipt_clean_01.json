@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_01",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "澜川医疗器械有限公司",
+    "payee_name": "启明餐饮管理(上海)有限公司",
+    "amount": "882172.73",
+    "date": "2024-02-06",
+    "serial_no": "HX20240206027100"
+  },
+  "rendered": {
+    "payer_name": "澜川医疗器械有限公司",
+    "payee_name": "启明餐饮管理(上海)有限公司",
+    "amount": "882,172.73",
+    "date": "2024-02-06",
+    "serial_no": "HX20240206027100"
+  }
+}

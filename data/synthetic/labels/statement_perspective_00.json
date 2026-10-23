@@ -1,0 +1,24 @@
+{
+  "id": "statement_perspective_00",
+  "template": "statement",
+  "difficulty": "perspective",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.05
+  },
+  "fields": {
+    "payer_name": "启明机械设备(苏州)有限公司",
+    "payee_name": null,
+    "amount": "177532.37",
+    "date": "2024-12-02",
+    "serial_no": "DZ202412873033"
+  },
+  "rendered": {
+    "payer_name": "启明机械设备（苏州）有限公司",
+    "payee_name": null,
+    "amount": "￥177,532.37",
+    "date": "2024-12-02",
+    "serial_no": "DZ202412873033"
+  }
+}

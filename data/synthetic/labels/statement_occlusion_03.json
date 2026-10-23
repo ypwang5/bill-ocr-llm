@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_03",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "云帆物流有限公司",
+    "payee_name": null,
+    "amount": "2.04",
+    "date": "2025-12-20",
+    "serial_no": "DZ202512278800"
+  },
+  "rendered": {
+    "payer_name": "云帆物流有限公司",
+    "payee_name": null,
+    "amount": "2.04",
+    "date": "2025年12月20日",
+    "serial_no": "DZ202512278800"
+  }
+}

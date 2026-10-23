@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_00",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "远拓文化传媒(北京)有限公司",
+    "payee_name": null,
+    "amount": "1176313.43",
+    "date": "2024-04-14",
+    "serial_no": "DZ202404197366"
+  },
+  "rendered": {
+    "payer_name": "远拓文化传媒（北京）有限公司",
+    "payee_name": null,
+    "amount": "¥1,176,313.43",
+    "date": "2024/04/14",
+    "serial_no": "DZ202404197366"
+  }
+}

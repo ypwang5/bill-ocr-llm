@@ -1,0 +1,24 @@
+{
+  "id": "statement_occlusion_02",
+  "template": "statement",
+  "difficulty": "occlusion",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "远拓餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "224205.66",
+    "date": "2025-01-02",
+    "serial_no": "DZ202501947636"
+  },
+  "rendered": {
+    "payer_name": "远拓餐饮管理(苏州)有限公司",
+    "payee_name": null,
+    "amount": "￥224,205.66",
+    "date": "2025年01月02日",
+    "serial_no": "DZ202501947636"
+  }
+}

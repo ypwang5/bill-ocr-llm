@@ -1,0 +1,22 @@
+{
+  "id": "statement_clean_03",
+  "template": "statement",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "沐阳文化传媒有限公司",
+    "payee_name": null,
+    "amount": "42.84",
+    "date": "2025-04-12",
+    "serial_no": "DZ202504626334"
+  },
+  "rendered": {
+    "payer_name": "沐阳文化传媒有限公司",
+    "payee_name": null,
+    "amount": "¥42.84",
+    "date": "2025-04-12",
+    "serial_no": "DZ202504626334"
+  }
+}

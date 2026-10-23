@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_00",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.46
+  },
+  "fields": {
+    "payer_name": "恒岳餐饮管理有限公司",
+    "payee_name": null,
+    "amount": "380990.42",
+    "date": "2025-03-10",
+    "serial_no": "DZ202503443206"
+  },
+  "rendered": {
+    "payer_name": "恒岳餐饮管理有限公司",
+    "payee_name": null,
+    "amount": "380,990.42",
+    "date": "2025/03/10",
+    "serial_no": "DZ202503443206"
+  }
+}

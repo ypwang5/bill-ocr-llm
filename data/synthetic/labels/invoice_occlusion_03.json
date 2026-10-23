@@ -1,0 +1,24 @@
+{
+  "id": "invoice_occlusion_03",
+  "template": "invoice",
+  "difficulty": "occlusion",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "恒岳文化传媒有限公司",
+    "payee_name": "青禾医疗器械有限公司",
+    "amount": "6470.63",
+    "date": "2025-12-04",
+    "serial_no": "13399235049823361069"
+  },
+  "rendered": {
+    "payer_name": "恒岳文化传媒有限公司",
+    "payee_name": "青禾医疗器械有限公司",
+    "amount": "￥6,470.63",
+    "date": "2025/12/04",
+    "serial_no": "13399235049823361069"
+  }
+}

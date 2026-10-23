@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_02",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "云帆信息技术有限公司",
+    "payee_name": "锦程农业发展(成都)有限公司",
+    "amount": "182077.01",
+    "date": "2026-02-14",
+    "serial_no": "HX20260214404318"
+  },
+  "rendered": {
+    "payer_name": "云帆信息技术有限公司",
+    "payee_name": "锦程农业发展（成都）有限公司",
+    "amount": "182,077.01",
+    "date": "2026/02/14",
+    "serial_no": "HX20260214404318"
+  }
+}

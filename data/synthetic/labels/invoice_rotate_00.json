@@ -1,0 +1,24 @@
+{
+  "id": "invoice_rotate_00",
+  "template": "invoice",
+  "difficulty": "rotate",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "angle": -9.33
+  },
+  "fields": {
+    "payer_name": "远拓建材有限公司",
+    "payee_name": "恒岳医疗器械(武汉)有限公司",
+    "amount": "16.97",
+    "date": "2025-11-05",
+    "serial_no": "90267444934580636087"
+  },
+  "rendered": {
+    "payer_name": "远拓建材有限公司",
+    "payee_name": "恒岳医疗器械（武汉）有限公司",
+    "amount": "￥16.97",
+    "date": "2025年11月05日",
+    "serial_no": "90267444934580636087"
+  }
+}

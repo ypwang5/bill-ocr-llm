@@ -1,0 +1,22 @@
+{
+  "id": "statement_clean_01",
+  "template": "statement",
+  "difficulty": "clean",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "星河机械设备有限公司",
+    "payee_name": null,
+    "amount": "166.58",
+    "date": "2026-09-11",
+    "serial_no": "DZ202609881354"
+  },
+  "rendered": {
+    "payer_name": "星河机械设备有限公司",
+    "payee_name": null,
+    "amount": "￥166.58",
+    "date": "2026/09/11",
+    "serial_no": "DZ202609881354"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "invoice_blur_00",
+  "template": "invoice",
+  "difficulty": "blur",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 1.67
+  },
+  "fields": {
+    "payer_name": "澜川物流有限公司",
+    "payee_name": "澜川餐饮管理(成都)有限公司",
+    "amount": "3313805.85",
+    "date": "2026-07-17",
+    "serial_no": "35870897935485905905"
+  },
+  "rendered": {
+    "payer_name": "澜川物流有限公司",
+    "payee_name": "澜川餐饮管理（成都）有限公司",
+    "amount": "¥3,313,805.85",
+    "date": "2026/07/17",
+    "serial_no": "35870897935485905905"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "receipt_blur_01",
+  "template": "receipt",
+  "difficulty": "blur",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 2.26
+  },
+  "fields": {
+    "payer_name": "嘉澍建材有限公司",
+    "payee_name": "启明信息技术有限公司",
+    "amount": "6908728.69",
+    "date": "2025-07-07",
+    "serial_no": "HX20250707044144"
+  },
+  "rendered": {
+    "payer_name": "嘉澍建材有限公司",
+    "payee_name": "启明信息技术有限公司",
+    "amount": "￥6,908,728.69",
+    "date": "2025-07-07",
+    "serial_no": "HX20250707044144"
+  }
+}

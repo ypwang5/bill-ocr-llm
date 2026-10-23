@@ -1,0 +1,24 @@
+{
+  "id": "statement_rotate_02",
+  "template": "statement",
+  "difficulty": "rotate",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "angle": -10.08
+  },
+  "fields": {
+    "payer_name": "青禾建材(武汉)有限公司",
+    "payee_name": null,
+    "amount": "19606.72",
+    "date": "2026-05-12",
+    "serial_no": "DZ202605637556"
+  },
+  "rendered": {
+    "payer_name": "青禾建材(武汉)有限公司",
+    "payee_name": null,
+    "amount": "19,606.72",
+    "date": "2026-05-12",
+    "serial_no": "DZ202605637556"
+  }
+}

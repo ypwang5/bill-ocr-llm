@@ -1,0 +1,24 @@
+{
+  "id": "invoice_lowres_02",
+  "template": "invoice",
+  "difficulty": "lowres",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.48
+  },
+  "fields": {
+    "payer_name": "锦程农业发展(杭州)有限公司",
+    "payee_name": "启明科技(武汉)有限公司",
+    "amount": "92.40",
+    "date": "2024-06-01",
+    "serial_no": "81692500085994474658"
+  },
+  "rendered": {
+    "payer_name": "锦程农业发展（杭州）有限公司",
+    "payee_name": "启明科技（武汉）有限公司",
+    "amount": "RMB 92.40",
+    "date": "2024-06-01",
+    "serial_no": "81692500085994474658"
+  }
+}

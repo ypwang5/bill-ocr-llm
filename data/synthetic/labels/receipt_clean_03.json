@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_03",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "锦程贸易(上海)有限公司",
+    "payee_name": "启明文化传媒有限公司",
+    "amount": "955.66",
+    "date": "2024-03-12",
+    "serial_no": "HX20240312058648"
+  },
+  "rendered": {
+    "payer_name": "锦程贸易（上海）有限公司",
+    "payee_name": "启明文化传媒有限公司",
+    "amount": "RMB 955.66",
+    "date": "2024/03/12",
+    "serial_no": "HX20240312058648"
+  }
+}

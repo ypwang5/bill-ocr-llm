@@ -1,0 +1,24 @@
+{
+  "id": "statement_lowres_02",
+  "template": "statement",
+  "difficulty": "lowres",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.42
+  },
+  "fields": {
+    "payer_name": "朗峰农业发展有限公司",
+    "payee_name": null,
+    "amount": "1277.33",
+    "date": "2026-06-27",
+    "serial_no": "DZ202606940907"
+  },
+  "rendered": {
+    "payer_name": "朗峰农业发展有限公司",
+    "payee_name": null,
+    "amount": "1,277.33",
+    "date": "2026年06月27日",
+    "serial_no": "DZ202606940907"
+  }
+}

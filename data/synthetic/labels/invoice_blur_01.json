@@ -1,0 +1,24 @@
+{
+  "id": "invoice_blur_01",
+  "template": "invoice",
+  "difficulty": "blur",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 2.3
+  },
+  "fields": {
+    "payer_name": "星河科技有限公司",
+    "payee_name": "澜川文化传媒(杭州)有限公司",
+    "amount": "7003.92",
+    "date": "2026-04-12",
+    "serial_no": "16586910813265599842"
+  },
+  "rendered": {
+    "payer_name": "星河科技有限公司",
+    "payee_name": "澜川文化传媒（杭州）有限公司",
+    "amount": "¥7,003.92",
+    "date": "2026年04月12日",
+    "serial_no": "16586910813265599842"
+  }
+}

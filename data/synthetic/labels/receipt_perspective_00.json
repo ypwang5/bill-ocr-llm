@@ -1,0 +1,24 @@
+{
+  "id": "receipt_perspective_00",
+  "template": "receipt",
+  "difficulty": "perspective",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.081
+  },
+  "fields": {
+    "payer_name": "沐阳医疗器械(苏州)有限公司",
+    "payee_name": "澜川建材(成都)有限公司",
+    "amount": "1035.26",
+    "date": "2026-04-14",
+    "serial_no": "HX20260414073918"
+  },
+  "rendered": {
+    "payer_name": "沐阳医疗器械(苏州)有限公司",
+    "payee_name": "澜川建材（成都）有限公司",
+    "amount": "1,035.26",
+    "date": "2026年04月14日",
+    "serial_no": "HX20260414073918"
+  }
+}

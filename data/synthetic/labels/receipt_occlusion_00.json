@@ -1,0 +1,24 @@
+{
+  "id": "receipt_occlusion_00",
+  "template": "receipt",
+  "difficulty": "occlusion",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "payee_name"
+  },
+  "fields": {
+    "payer_name": "嘉澍机械设备(杭州)有限公司",
+    "payee_name": "远拓科技(成都)有限公司",
+    "amount": "3266635.41",
+    "date": "2026-09-30",
+    "serial_no": "HX20260930442831"
+  },
+  "rendered": {
+    "payer_name": "嘉澍机械设备（杭州）有限公司",
+    "payee_name": "远拓科技(成都)有限公司",
+    "amount": "￥3,266,635.41",
+    "date": "2026-09-30",
+    "serial_no": "HX20260930442831"
+  }
+}

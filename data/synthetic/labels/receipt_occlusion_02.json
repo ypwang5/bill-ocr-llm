@@ -1,0 +1,24 @@
+{
+  "id": "receipt_occlusion_02",
+  "template": "receipt",
+  "difficulty": "occlusion",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "payee_name"
+  },
+  "fields": {
+    "payer_name": "恒岳医疗器械(成都)有限公司",
+    "payee_name": "远拓文化传媒有限公司",
+    "amount": "3.30",
+    "date": "2025-06-07",
+    "serial_no": "HX20250607745147"
+  },
+  "rendered": {
+    "payer_name": "恒岳医疗器械（成都）有限公司",
+    "payee_name": "远拓文化传媒有限公司",
+    "amount": "RMB 3.30",
+    "date": "2025-06-07",
+    "serial_no": "HX20250607745147"
+  }
+}

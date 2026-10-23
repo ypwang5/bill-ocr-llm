@@ -1,0 +1,24 @@
+{
+  "id": "invoice_lowres_01",
+  "template": "invoice",
+  "difficulty": "lowres",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "scale": 0.45
+  },
+  "fields": {
+    "payer_name": "远拓信息技术(苏州)有限公司",
+    "payee_name": "青禾餐饮管理有限公司",
+    "amount": "182.00",
+    "date": "2025-11-02",
+    "serial_no": "80741111931477925753"
+  },
+  "rendered": {
+    "payer_name": "远拓信息技术（苏州）有限公司",
+    "payee_name": "青禾餐饮管理有限公司",
+    "amount": "182.00",
+    "date": "2025年11月02日",
+    "serial_no": "80741111931477925753"
+  }
+}

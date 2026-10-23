@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_03",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 1.97
+  },
+  "fields": {
+    "payer_name": "沐阳文化传媒(上海)有限公司",
+    "payee_name": null,
+    "amount": "2.05",
+    "date": "2024-07-11",
+    "serial_no": "DZ202407892319"
+  },
+  "rendered": {
+    "payer_name": "沐阳文化传媒（上海）有限公司",
+    "payee_name": null,
+    "amount": "￥2.05",
+    "date": "2024年07月11日",
+    "serial_no": "DZ202407892319"
+  }
+}

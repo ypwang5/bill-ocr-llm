@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_00",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.111
+  },
+  "fields": {
+    "payer_name": "恒岳农业发展(杭州)有限公司",
+    "payee_name": "澜川贸易有限公司",
+    "amount": "857.31",
+    "date": "2025-09-04",
+    "serial_no": "73683712379346929419"
+  },
+  "rendered": {
+    "payer_name": "恒岳农业发展(杭州)有限公司",
+    "payee_name": "澜川贸易有限公司",
+    "amount": "857.31",
+    "date": "2025年09月04日",
+    "serial_no": "73683712379346929419"
+  }
+}

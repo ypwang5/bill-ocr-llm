@@ -1,0 +1,22 @@
+{
+  "id": "invoice_clean_03",
+  "template": "invoice",
+  "difficulty": "clean",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "澜川信息技术有限公司",
+    "payee_name": "远拓文化传媒有限公司",
+    "amount": "1006.05",
+    "date": "2024-11-20",
+    "serial_no": "35957184976412730305"
+  },
+  "rendered": {
+    "payer_name": "澜川信息技术有限公司",
+    "payee_name": "远拓文化传媒有限公司",
+    "amount": "1,006.05",
+    "date": "2024/11/20",
+    "serial_no": "35957184976412730305"
+  }
+}

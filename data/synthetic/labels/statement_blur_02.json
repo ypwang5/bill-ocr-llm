@@ -1,0 +1,24 @@
+{
+  "id": "statement_blur_02",
+  "template": "statement",
+  "difficulty": "blur",
+  "font": "simhei",
+  "seed": 42,
+  "degrade": {
+    "blur_radius": 1.78
+  },
+  "fields": {
+    "payer_name": "锦程建材有限公司",
+    "payee_name": null,
+    "amount": "15185.38",
+    "date": "2024-11-16",
+    "serial_no": "DZ202411327029"
+  },
+  "rendered": {
+    "payer_name": "锦程建材有限公司",
+    "payee_name": null,
+    "amount": "￥15,185.38",
+    "date": "2024年11月16日",
+    "serial_no": "DZ202411327029"
+  }
+}

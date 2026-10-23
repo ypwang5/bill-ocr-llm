@@ -1,0 +1,24 @@
+{
+  "id": "statement_perspective_03",
+  "template": "statement",
+  "difficulty": "perspective",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.12
+  },
+  "fields": {
+    "payer_name": "青禾贸易有限公司",
+    "payee_name": null,
+    "amount": "34.09",
+    "date": "2024-05-07",
+    "serial_no": "DZ202405477585"
+  },
+  "rendered": {
+    "payer_name": "青禾贸易有限公司",
+    "payee_name": null,
+    "amount": "34.09",
+    "date": "2024/05/07",
+    "serial_no": "DZ202405477585"
+  }
+}

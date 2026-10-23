@@ -1,0 +1,24 @@
+{
+  "id": "invoice_occlusion_01",
+  "template": "invoice",
+  "difficulty": "occlusion",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "stamp_on": "amount"
+  },
+  "fields": {
+    "payer_name": "锦程科技有限公司",
+    "payee_name": "云帆物流有限公司",
+    "amount": "92540.01",
+    "date": "2024-01-27",
+    "serial_no": "50588631498374525830"
+  },
+  "rendered": {
+    "payer_name": "锦程科技有限公司",
+    "payee_name": "云帆物流有限公司",
+    "amount": "￥92,540.01",
+    "date": "2024年01月27日",
+    "serial_no": "50588631498374525830"
+  }
+}

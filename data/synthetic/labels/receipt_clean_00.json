@@ -1,0 +1,22 @@
+{
+  "id": "receipt_clean_00",
+  "template": "receipt",
+  "difficulty": "clean",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {},
+  "fields": {
+    "payer_name": "恒岳信息技术有限公司",
+    "payee_name": "云帆农业发展(上海)有限公司",
+    "amount": "14685.17",
+    "date": "2026-09-05",
+    "serial_no": "HX20260905297907"
+  },
+  "rendered": {
+    "payer_name": "恒岳信息技术有限公司",
+    "payee_name": "云帆农业发展（上海）有限公司",
+    "amount": "14,685.17",
+    "date": "2026-09-05",
+    "serial_no": "HX20260905297907"
+  }
+}

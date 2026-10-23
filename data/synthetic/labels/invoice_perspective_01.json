@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_01",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "simsun",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.08
+  },
+  "fields": {
+    "payer_name": "青禾文化传媒有限公司",
+    "payee_name": "云帆信息技术有限公司",
+    "amount": "327431.68",
+    "date": "2026-08-02",
+    "serial_no": "86425216747382260678"
+  },
+  "rendered": {
+    "payer_name": "青禾文化传媒有限公司",
+    "payee_name": "云帆信息技术有限公司",
+    "amount": "327,431.68",
+    "date": "2026年08月02日",
+    "serial_no": "86425216747382260678"
+  }
+}

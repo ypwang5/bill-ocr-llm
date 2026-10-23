@@ -1,0 +1,24 @@
+{
+  "id": "invoice_perspective_03",
+  "template": "invoice",
+  "difficulty": "perspective",
+  "font": "msyh",
+  "seed": 42,
+  "degrade": {
+    "max_corner_shift": 0.119
+  },
+  "fields": {
+    "payer_name": "沐阳贸易有限公司",
+    "payee_name": "沐阳科技(苏州)有限公司",
+    "amount": "9.93",
+    "date": "2024-03-24",
+    "serial_no": "29664106362246239960"
+  },
+  "rendered": {
+    "payer_name": "沐阳贸易有限公司",
+    "payee_name": "沐阳科技(苏州)有限公司",
+    "amount": "RMB 9.93",
+    "date": "2024年03月24日",
+    "serial_no": "29664106362246239960"
+  }
+}
