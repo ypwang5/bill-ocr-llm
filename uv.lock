@@ -918,6 +918,7 @@ source = { editable = "." }
 dependencies = [
     { name = "paddleocr" },
     { name = "paddlepaddle" },
+    { name = "pydantic" },
 ]
 
 [package.dev-dependencies]
@@ -929,6 +930,7 @@ dev = [
 requires-dist = [
     { name = "paddleocr", specifier = ">=3.7.0" },
     { name = "paddlepaddle", specifier = ">=3.3.1" },
+    { name = "pydantic", specifier = ">=2.14.1" },
 ]
 
 [package.metadata.requires-dev]
