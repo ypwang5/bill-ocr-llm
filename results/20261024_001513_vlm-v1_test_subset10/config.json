@@ -1,0 +1,28 @@
+{
+  "set": "test",
+  "ids": [
+    "invoice_blur_00",
+    "invoice_lowres_00",
+    "invoice_occlusion_00",
+    "receipt_clean_00",
+    "receipt_occlusion_01",
+    "receipt_perspective_00",
+    "receipt_rotate_00",
+    "statement_clean_00",
+    "statement_occlusion_00",
+    "statement_rotate_00"
+  ],
+  "use_doc_unwarping": true,
+  "method": "vlm",
+  "prompt_version": "v1",
+  "prompt_sha256": "0082b994ac41ef31eedfdc85e4d42d4ca6fcffc671f7fc654c86cac3df7f0b4e",
+  "llm": {
+    "base_url": "https://api.deepseek.com",
+    "model_text": "deepseek-flash",
+    "model_vision": "deepseek-flash",
+    "price_text_in": 1.0,
+    "price_text_out": 4.0,
+    "price_vision_in": 1.0,
+    "price_vision_out": 4.0
+  }
+}

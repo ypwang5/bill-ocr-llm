@@ -19,9 +19,9 @@ from .base import FIELDS, ExtractionResult, normalize_partial
 PROMPT_FILES = ("system.md", "user.md", "retry.md")
 
 
-def load_prompt(version: str) -> tuple[dict[str, str], str]:
+def load_prompt(version: str, name: str = "extract") -> tuple[dict[str, str], str]:
     """返回三段提示词和它们的 sha256 指纹(写进实验配置,证明跑的是哪一版)。"""
-    folder = ROOT / "prompts" / f"extract_{version}"
+    folder = ROOT / "prompts" / f"{name}_{version}"
     parts = {name: (folder / name).read_text(encoding="utf-8") for name in PROMPT_FILES}
     digest = hashlib.sha256("".join(parts[n] for n in PROMPT_FILES).encode("utf-8")).hexdigest()
     return parts, digest
@@ -42,6 +42,44 @@ def validate(text: str) -> tuple[dict | None, dict | None, str | None]:
         return None, data, ";".join(msgs)
 
 
+def chat_with_retry(client: LLMClient, messages: list[dict], retry_tpl: str, **chat_kwargs) -> ExtractionResult:
+    """B、C 共用:调用 → 校验 → 不合格把错误发回去重试一次 → 还不合格只丢坏字段。latency_s 只含 LLM。"""
+    outputs, llm_s, t_in, t_out = [], 0.0, 0, 0
+    for attempt in range(2):  # 首次 + 重试一次
+        resp = client.chat(messages, **chat_kwargs)
+        outputs.append({"text": resp.text, "reasoning_tokens": resp.reasoning_tokens, "model": resp.model})
+        llm_s, t_in, t_out = llm_s + resp.latency_s, t_in + resp.tokens_in, t_out + resp.tokens_out
+        fields, data, error = validate(resp.text)
+        if error is None:
+            break
+        outputs[-1]["error"] = error
+        # 把模型自己的输出和错误原因都带上,让它知道错在哪
+        messages = messages + [
+            {"role": "assistant", "content": resp.text},
+            {"role": "user", "content": retry_tpl.replace("{error}", error)},
+        ]
+
+    field_errors: dict[str, str] = {}
+    if error is not None:
+        # 降级:和方案 A 一样只丢坏字段;连 JSON 都不是就全部置 null
+        if data is not None:
+            fields, field_errors = normalize_partial({k: data.get(k) for k in FIELDS})
+        else:
+            fields = dict.fromkeys(FIELDS)
+            field_errors = dict.fromkeys(FIELDS, error)
+
+    return ExtractionResult(
+        fields=fields,
+        field_errors=field_errors,
+        latency_s=llm_s,
+        tokens_in=t_in,
+        tokens_out=t_out,
+        raw_output=json.dumps(outputs, ensure_ascii=False),
+        retries=attempt,
+        format_failed=error is not None,
+    )
+
+
 class OcrLlmExtractor:
     def __init__(self, prompt_version: str = "v1", client: LLMClient | None = None, use_doc_unwarping: bool = True):
         self.prompt, self.prompt_sha256 = load_prompt(prompt_version)
@@ -55,38 +93,7 @@ class OcrLlmExtractor:
             {"role": "system", "content": self.prompt["system.md"]},
             {"role": "user", "content": self.prompt["user.md"].replace("{ocr_text}", result.text)},
         ]
-        outputs, llm_s, t_in, t_out = [], 0.0, 0, 0
-        for attempt in range(2):  # 首次 + 重试一次
-            resp = self.client.chat(messages)
-            outputs.append({"text": resp.text, "reasoning_tokens": resp.reasoning_tokens, "model": resp.model})
-            llm_s, t_in, t_out = llm_s + resp.latency_s, t_in + resp.tokens_in, t_out + resp.tokens_out
-            fields, data, error = validate(resp.text)
-            if error is None:
-                break
-            outputs[-1]["error"] = error
-            # 把模型自己的输出和错误原因都带上,让它知道错在哪
-            messages += [
-                {"role": "assistant", "content": resp.text},
-                {"role": "user", "content": self.prompt["retry.md"].replace("{error}", error)},
-            ]
-
-        field_errors: dict[str, str] = {}
-        if error is not None:
-            # 降级:和方案 A 一样只丢坏字段;连 JSON 都不是就全部置 null
-            if data is not None:
-                fields, field_errors = normalize_partial({k: data.get(k) for k in FIELDS})
-            else:
-                fields = dict.fromkeys(FIELDS)
-                field_errors = dict.fromkeys(FIELDS, error)
-
-        return ExtractionResult(
-            fields=fields,
-            field_errors=field_errors,
-            latency_s=result.latency_s + llm_s,
-            ocr_latency_s=result.latency_s,
-            tokens_in=t_in,
-            tokens_out=t_out,
-            raw_output=json.dumps(outputs, ensure_ascii=False),
-            retries=attempt,
-            format_failed=error is not None,
-        )
+        r = chat_with_retry(self.client, messages, self.prompt["retry.md"])
+        r.latency_s += result.latency_s
+        r.ocr_latency_s = result.latency_s
+        return r
