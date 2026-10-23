@@ -7,6 +7,7 @@ import hashlib
 import json
 import math
 import statistics
+import threading
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -107,6 +108,15 @@ def _cache_path(image_path: Path, use_doc_unwarping: bool) -> Path:
 
 
 _engines: dict[bool, PaddleEngine] = {}
+# 服务里多个请求会并发调用;Paddle 的推理对象不保证线程安全,加载和推理都串行
+_lock = threading.Lock()
+
+
+def get_engine(use_doc_unwarping: bool = True) -> PaddleEngine:
+    with _lock:
+        if use_doc_unwarping not in _engines:
+            _engines[use_doc_unwarping] = PaddleEngine(use_doc_unwarping)
+        return _engines[use_doc_unwarping]
 
 
 def ocr(image_path: Path, use_doc_unwarping: bool = True) -> OcrResult:
@@ -119,9 +129,9 @@ def ocr(image_path: Path, use_doc_unwarping: bool = True) -> OcrResult:
             lines = [OcrLine(l["text"], l["score"], l["poly"], tuple(l["box"])) for l in data["lines"]]
             return OcrResult(lines, data["skew_deg"], data["latency_s"], data["config"])
 
-    if use_doc_unwarping not in _engines:
-        _engines[use_doc_unwarping] = PaddleEngine(use_doc_unwarping)
-    result = _engines[use_doc_unwarping].run(image_path)
+    engine = get_engine(use_doc_unwarping)
+    with _lock:
+        result = engine.run(image_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {"sha256": sha, **asdict(result)}
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
