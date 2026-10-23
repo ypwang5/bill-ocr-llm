@@ -29,6 +29,9 @@ class ExtractionResult:
     tokens_in: int = 0
     tokens_out: int = 0
     raw_output: str = ""
+    # 只有 LLM 方案用:格式校验没过而重试的次数;重试后仍不合格则 format_failed
+    retries: int = 0
+    format_failed: bool = False
 
 
 def normalize_partial(raw: dict[str, str | None]) -> tuple[dict[str, str | None], dict[str, str]]:
