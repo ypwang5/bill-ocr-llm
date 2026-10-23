@@ -37,14 +37,13 @@ def make_extractor(method: str, reuse: dict[str, list[dict]]) -> Callable[[Path]
     raise ValueError(method)
 
 
-def prices(method: str) -> dict:
+def prices(method: str, llm: dict) -> dict:
     if method == "A":
         return {}
-    s = load_settings()
     # D 的 token 里混有文本和视觉调用;本项目两者同价,统一按文本价估算(报告中注明)
     if method == "C":
-        return {"price_in": s.price_vision_in, "price_out": s.price_vision_out}
-    return {"price_in": s.price_text_in, "price_out": s.price_text_out}
+        return {"price_in": llm["price_vision_in"], "price_out": llm["price_vision_out"]}
+    return {"price_in": llm["price_text_in"], "price_out": llm["price_text_out"]}
 
 
 def pct(x: float) -> str:
@@ -93,7 +92,11 @@ def main() -> None:
 
     reuse = load_reuse(args.reuse) if args.reuse else {}
     if args.reuse:
-        args.set = json.loads((args.reuse / "config.json").read_text(encoding="utf-8"))["set"]
+        old = json.loads((args.reuse / "config.json").read_text(encoding="utf-8"))
+        # 回放时用当时记录的(公开)模型配置和单价,不需要 .env,别人 clone 下来就能复现
+        args.set, llm = old["set"], old["llm"]
+    else:
+        llm = load_settings().public()
     labels = load_labels(args.set, SUBSET10 if args.subset10 else None)
     ids = {l["id"] for l in labels}
     scope = "SUBSET10" if args.subset10 else "全部"
@@ -107,15 +110,14 @@ def main() -> None:
             rows[m] = run(labels, args.set, make_extractor(m, reuse))
         for r in rows[m]:
             r["method"] = m
-        p = prices(m)
+        p = prices(m, llm)
         results[m] = {"all": compute(rows[m], **p), "difficulty": grouped(rows[m], "difficulty", **p),
                       "template": grouped(rows[m], "template", **p)}
 
     out = ROOT / "results" / f"{dt.datetime.now():%Y%m%d_%H%M%S}_benchmark_{args.set}{'_subset10' if args.subset10 else ''}"
     out.mkdir(parents=True)
-    s = load_settings()
     config = {"set": args.set, "scope": scope, "n": len(labels), "methods": list(rows), "reuse": str(args.reuse or ""),
-              "llm": s.public(), "use_doc_unwarping": True}
+              "llm": llm, "use_doc_unwarping": True}
     (out / "config.json").write_text(json.dumps(config, ensure_ascii=False, indent=2), encoding="utf-8")
     for m, rs in rows.items():
         (out / f"{m}.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rs), encoding="utf-8")
