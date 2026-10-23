@@ -10,7 +10,7 @@ from typing import Callable
 from ocr_extract.config import ROOT
 from ocr_extract.extractors.base import FIELDS, ExtractionResult
 
-SETS = {"dev": ROOT / "data" / "synthetic_dev", "test": ROOT / "data" / "synthetic"}
+SETS = {"dev": ROOT / "data" / "synthetic_dev", "tune": ROOT / "data" / "synthetic_tune", "test": ROOT / "data" / "synthetic"}
 
 # 与方案 B 对比用的 10 张,在看到任何结果之前就定好(见 1.5 方案)
 SUBSET10 = [
