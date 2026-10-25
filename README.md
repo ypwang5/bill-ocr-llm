@@ -4,7 +4,11 @@
 
 > 全部样本为脚本合成,使用虚构的公司名和账号,不含任何真实个人或银行数据。
 
-![网页截图](docs/images/web_result.png)
+| 单个方案:逐字段对照标准答案(D 在遮挡件上回退到多模态) | 四种方案对比:同一张模糊发票 |
+|---|---|
+| ![单方案结果](docs/images/demo_single.png) | ![四方案对比](docs/images/demo_compare.png) |
+
+网页内置 18 张样本(3 类票据 × 6 种形态),点一下就能看它在测试集上的真实结果,也可以"实时重跑"或上传自己的图。
 
 ## 核心结论(72 张合成测试集)
 
@@ -49,7 +53,7 @@ cp .env.example .env          # Windows PowerShell:Copy-Item .env.example .env
 
 ```bash
 uv run uvicorn ocr_extract.api.main:app --port 8000
-# 浏览器打开 http://127.0.0.1:8000 ,上传 data/synthetic/images/ 下任意一张图
+# 浏览器打开 http://127.0.0.1:8000 ,点内置样本,或上传 data/synthetic/images/ 下任意一张图
 ```
 
 接口和网页里的方案 D 用的是主配置(只用 C 补 B 的空);要用 D-safe,把 `api/main.py` 里的 `HybridExtractor(...)` 加上 `SAFE_CONFIG` 参数。
