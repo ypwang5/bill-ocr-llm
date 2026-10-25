@@ -15,6 +15,14 @@ if ! swapon --show | grep -q /swapfile; then
   note swap
 fi
 
+# 1b. OpenCV(PaddleOCR 依赖)需要系统的 libGL;只在原本没装时安装并记账,下线时才知道该不该删
+for pkg in libgl1 libglib2.0-0; do
+  if ! dpkg -s "$pkg" >/dev/null 2>&1; then
+    apt-get install -y "$pkg" >/dev/null
+    note "apt:$pkg"
+  fi
+done
+
 # 2. 专用用户:服务不用 root 跑
 if ! id ocr >/dev/null 2>&1; then
   useradd --system --create-home --home-dir /home/ocr --shell /usr/sbin/nologin ocr

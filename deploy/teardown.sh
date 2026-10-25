@@ -32,6 +32,11 @@ if has swap; then
   sed -i '\#^/swapfile none swap sw 0 0$#d' /etc/fstab
 fi
 
+echo "== 4b. 卸载部署时新装的系统包(原本就有的不动)"
+for pkg in $(grep '^apt:' "$MANIFEST" 2>/dev/null | cut -d: -f2); do
+  apt-get purge -y "$pkg" >/dev/null 2>&1 && echo "已卸载 $pkg"
+done
+
 echo "== 5. 检查残留(下面应全部为空/不存在)"
 systemctl list-unit-files | grep -E "bill-ocr|cloudflared" || echo "服务: 无"
 id ocr 2>/dev/null || echo "用户 ocr: 无"

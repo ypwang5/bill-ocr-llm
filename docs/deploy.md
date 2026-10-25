@@ -68,6 +68,7 @@ bash /opt/bill-ocr/deploy/teardown.sh
 | 删除内容 | 位置 |
 |---|---|
 | 服务 | `bill-ocr.service`、`cloudflared` 服务、cloudflared 本体 |
+| 系统包 | 部署时新装的 `libgl1` 等(OpenCV 需要;原本就有的不动) |
 | Tunnel | `bill-ocr`、`/etc/cloudflared`、`/root/.cloudflared` |
 | 代码、密钥、依赖 | `/opt/bill-ocr`(含 `.env`、`.venv`) |
 | 用户及其目录 | `ocr`、`/home/ocr`(含 uv、uv 缓存、PaddleOCR 模型) |
