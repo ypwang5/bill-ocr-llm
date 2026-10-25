@@ -60,3 +60,24 @@ def test_rejects_bad_uploads(client, monkeypatch):
 
 def test_health(client):
     assert client.get("/health").json() == {"status": "ok"}
+
+
+def test_demo_samples_and_images(client):
+    data = client.get("/demo/samples.json").json()
+    assert len(data["samples"]) == 18
+    # 3 类票据 x 6 种形态,每个组合恰好一张
+    assert len({(s["template"], s["difficulty"]) for s in data["samples"]}) == 18
+    sid = data["samples"][0]["id"]
+    assert client.get(f"/samples/{sid}.png").headers["content-type"] == "image/png"
+    assert client.get(f"/demo/thumbs/{sid}.jpg").status_code == 200
+    assert client.get("/samples/..%2F..%2Fpyproject.png").status_code == 404  # 白名单外一律 404
+
+
+def test_extract_by_sample_id(client):
+    r = client.post("/extract", data={"sample_id": "receipt_clean_00", "method": "C"})
+    assert r.status_code == 200 and r.json()["method"] == "C"
+    assert client.seen[-1][1].name == "receipt_clean_00.png"
+    assert client.post("/extract", data={"sample_id": "nope"}).status_code == 404
+    assert client.post("/extract", data={"method": "C"}).status_code == 400  # 两个都没给
+    both = client.post("/extract", files={"file": ("a.png", png(), "image/png")}, data={"sample_id": "receipt_clean_00"})
+    assert both.status_code == 400

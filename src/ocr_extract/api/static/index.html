@@ -5,125 +5,334 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>票据字段抽取</title>
 <style>
-  :root { --bg: #f6f7f9; --card: #fff; --text: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --warn: #9a6700; --bad: #cf222e; }
+  :root { --bg: #f6f7f9; --card: #fff; --text: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da;
+          --accent-soft: #ddf4ff; --warn: #9a6700; --bad: #cf222e; --good: #1a7f37; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #0d1117; --card: #161b22; --text: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --warn: #d29922; --bad: #f85149; }
+    :root { --bg: #0d1117; --card: #161b22; --text: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8;
+            --accent-soft: #12263f; --warn: #d29922; --bad: #f85149; --good: #3fb950; }
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 system-ui, "Microsoft YaHei", sans-serif; }
-  main { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
-  h1 { font-size: 22px; margin: 0 0 4px; }
+  main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; }
+  a { color: var(--accent); }
+  header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 15px; margin: 0 0 10px; }
   .muted { color: var(--muted); font-size: 13px; }
+  .notice { color: var(--warn); font-size: 13px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin-top: 16px; }
-  form { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-  select, button, input[type=file] { font: inherit; color: inherit; }
-  select, button { padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
-  button { background: var(--accent); color: #fff; border-color: var(--accent); cursor: pointer; }
-  button:disabled { opacity: .6; cursor: wait; }
-  .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
-  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
-  img { max-width: 100%; border: 1px solid var(--line); border-radius: 6px; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .stat { border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+  .stat b { font-size: 20px; }
+  .gallery { display: grid; grid-template-columns: 5.5em repeat(6, minmax(0, 1fr)); gap: 6px; align-items: center; }
+  .gallery .head { font-size: 12px; color: var(--muted); text-align: center; }
+  .gallery .rowlabel { font-size: 13px; }
+  .thumb { padding: 0; border: 2px solid var(--line); border-radius: 6px; background: var(--card); cursor: pointer; overflow: hidden; aspect-ratio: 4 / 3; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .thumb.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+  .upload { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .methods { display: flex; flex-wrap: wrap; gap: 6px; }
+  .methods button, .btn { font: inherit; padding: 5px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--text); cursor: pointer; }
+  .methods button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:disabled { opacity: .6; cursor: wait; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; }
+  .grid.wide { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.7fr); }
+  .nowrap { white-space: nowrap; }
+  #preview { max-width: 100%; border: 1px solid var(--line); border-radius: 6px; }
+  .tag { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .scroll { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
-  td, th { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; word-break: break-all; }
-  th { color: var(--muted); font-weight: normal; width: 7.5em; }
+  td, th { text-align: left; padding: 6px 6px; border-bottom: 1px solid var(--line); vertical-align: top; word-break: break-all; }
+  th { color: var(--muted); font-weight: normal; white-space: nowrap; }
+  .ok { color: var(--good); }
+  .bad { color: var(--bad); }
   .null { color: var(--warn); }
-  .err { color: var(--bad); }
-  pre { margin: 0; white-space: pre-wrap; word-break: break-all; font-size: 13px; }
+  details pre { margin: 8px 0 0; white-space: pre-wrap; word-break: break-all; font-size: 12px; }
+  @media (max-width: 720px) {
+    .grid, .grid.wide { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .gallery { grid-template-columns: 3.6em repeat(6, minmax(0, 1fr)); gap: 4px; }
+    .gallery .head { font-size: 11px; }
+    .gallery .rowlabel { font-size: 12px; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>票据字段抽取</h1>
-  <div class="muted">上传转账回单、发票或对账单图片(PNG/JPEG,≤5MB),抽取付款人、收款人、金额、日期、编号。仅用于合成样本演示。</div>
+  <header>
+    <h1>票据字段抽取 · OCR + 大模型融合</h1>
+    <a href="https://github.com/ypwang5/bill-ocr-llm" target="_blank" rel="noopener">GitHub 源码与实验报告</a>
+  </header>
+  <div class="muted">从转账回单、发票、对账单里抽取付款人、收款人、金额、日期、编号。四种方案:A 规则、B OCR+大模型、C 多模态直接看图、D 融合路由(先 B,不确定时回退 C)。</div>
+  <div class="notice">所有样本均为脚本合成的虚构票据。请勿上传真实票据或个人信息。</div>
 
   <div class="card">
-    <form id="form">
-      <input type="file" id="file" name="file" accept="image/png,image/jpeg" required>
-      <label>方案
-        <select id="method" name="method">
-          <option value="D" selected>D 融合路由(先 B,不确定时回退 C)</option>
-          <option value="A">A OCR + 规则</option>
-          <option value="B">B OCR + 大模型</option>
-          <option value="C">C 多模态直接看图</option>
-        </select>
-      </label>
-      <button id="submit" type="submit">识别</button>
-      <span id="status" class="muted"></span>
-    </form>
+    <h2>测试集 72 张上的整体结果</h2>
+    <div class="stats" id="stats"></div>
+    <div class="muted" style="margin-top:6px">整单全对 = 5 个字段全部正确。耗时为 P50,A/B/D 含 CPU 上的 PaddleOCR。</div>
   </div>
 
-  <div class="grid">
-    <div class="card"><img id="preview" alt="" hidden><div id="nopreview" class="muted">选择图片后在这里预览</div></div>
-    <div class="card">
-      <table id="result"><tbody><tr><td class="muted">结果会显示在这里</td></tr></tbody></table>
+  <div class="card">
+    <h2>① 选一张样本</h2>
+    <div class="gallery" id="gallery"></div>
+    <div class="muted" style="margin-top:6px">每个"类型 × 形态"按固定规则取编号 00 的那张,不按结果挑选;下方显示的是它在测试集上的真实运行记录。</div>
+    <div class="upload">
+      <span class="muted">或上传自己的图(PNG/JPEG,≤5MB,实时调用,约 20~40 秒):</span>
+      <input type="file" id="file" accept="image/png,image/jpeg">
     </div>
   </div>
 
-  <div class="card"><div class="muted">原始 JSON</div><pre id="raw">-</pre></div>
+  <div class="card">
+    <h2>② 选方案</h2>
+    <div class="methods" id="methods">
+      <button data-m="A">A 规则</button>
+      <button data-m="B">B OCR + 大模型</button>
+      <button data-m="C">C 多模态</button>
+      <button data-m="D">D 融合路由</button>
+      <button data-m="cmp">四种方案对比</button>
+    </div>
+  </div>
+
+  <div class="grid" id="panes">
+    <div class="card"><img id="preview" alt="票据预览" hidden><div id="nopreview" class="muted">选择样本后在这里预览</div></div>
+    <div class="card">
+      <div class="bar" id="bar"></div>
+      <div class="scroll"><table id="result"><tbody><tr><td class="muted">结果会显示在这里</td></tr></tbody></table></div>
+      <details><summary class="muted">原始 JSON</summary><pre id="raw">-</pre></details>
+    </div>
+  </div>
 </main>
 
 <script>
 const LABELS = { payer_name: "付款人", payee_name: "收款人", amount: "金额", date: "日期", serial_no: "编号" };
+const TEMPLATES = { receipt: "转账回单", invoice: "发票", statement: "对账单" };
+const SHORT_T = { receipt: "回单", invoice: "发票", statement: "对账单" };
+const DIFFS = { clean: "清晰", blur: "模糊", rotate: "倾斜", lowres: "低分辨率", perspective: "手机透视", occlusion: "印章遮挡" };
+const NAMES = { A: "A 规则", B: "B OCR+大模型", C: "C 多模态", D: "D 融合" };
 const $ = (id) => document.getElementById(id);
+const state = { data: null, sample: null, upload: null, method: "D", live: null };
+
+// 所有文字都用 textContent 写入,不用 innerHTML:结果里的内容不会被当成 HTML 执行
+function el(tag, text, cls) {
+  const e = document.createElement(tag);
+  if (text != null) e.textContent = text;
+  if (cls) e.className = cls;
+  return e;
+}
+const pct = (x) => (x * 100).toFixed(0) + "%";
+const secs = (x) => x.toFixed(1) + " 秒";
+
+function renderStats(summary, n) {
+  $("stats").replaceChildren(...Object.entries(summary).map(([m, s]) => {
+    const d = el("div", null, "stat");
+    d.append(el("div", NAMES[m], "muted"), el("b", pct(s.doc_acc)),
+             el("div", secs(s.latency_p50) + " · " + (s.cost_per_doc ? "约 " + s.cost_per_doc.toFixed(4) + " 元/张" : "不调大模型"), "muted"));
+    return d;
+  }));
+}
+
+function renderGallery(samples) {
+  const g = $("gallery");
+  g.append(el("div"));
+  for (const d of Object.values(DIFFS)) g.append(el("div", d, "head"));
+  for (const [t, tname] of Object.entries(SHORT_T)) {
+    g.append(el("div", tname, "rowlabel"));
+    for (const d of Object.keys(DIFFS)) {
+      const s = samples.find((x) => x.template === t && x.difficulty === d);
+      const b = el("button", null, "thumb");
+      b.dataset.id = s.id;
+      b.title = TEMPLATES[t] + " · " + DIFFS[d];
+      const img = el("img");
+      img.src = "/demo/thumbs/" + s.id + ".jpg";
+      img.alt = b.title;
+      img.loading = "lazy";
+      b.append(img);
+      b.onclick = () => selectSample(s.id);
+      g.append(b);
+    }
+  }
+}
+
+function syncUrl() {
+  const p = new URLSearchParams();
+  if (state.sample) p.set("s", state.sample.id);
+  p.set("m", state.method);
+  history.replaceState(null, "", "?" + p);
+}
+
+function selectSample(id) {
+  state.sample = state.data.samples.find((s) => s.id === id);
+  state.upload = null;
+  state.live = null;
+  $("file").value = "";
+  for (const b of document.querySelectorAll(".thumb")) b.classList.toggle("on", b.dataset.id === id);
+  showPreview("/samples/" + id + ".png");
+  render();
+}
+
+function selectMethod(m) {
+  state.method = m;
+  state.live = null;
+  for (const b of document.querySelectorAll("#methods button")) b.classList.toggle("on", b.dataset.m === m);
+  render();
+}
+
+function showPreview(src) {
+  $("preview").src = src;
+  $("preview").hidden = false;
+  $("nopreview").hidden = true;
+}
+
+function cell(value, gold, err) {
+  if (value == null) return el("td", err ? "null(" + err + ")" : "null(留空)", "null");
+  const td = el("td", value);
+  if (gold !== undefined) td.className = value === gold ? "ok" : "bad";
+  return td;
+}
+
+function mark(value, gold) {
+  if (value == null) return el("td", "○ 留空", "null");
+  return value === gold ? el("td", "✓", "ok") : el("td", "✗ 错值", "bad");
+}
+
+function tr(...cells) {
+  const r = el("tr");
+  r.append(...cells);
+  return r;
+}
+
+// 单个方案:字段 | 识别结果 | 标准答案 | 对错
+function renderSingle(r, gold) {
+  const tb = el("tbody");
+  const head = [el("th", "字段"), el("th", "识别结果")];
+  if (gold) head.push(el("th", "标准答案"), el("th", ""));
+  tb.append(tr(...head));
+  for (const [k, label] of Object.entries(LABELS)) {
+    const cells = [el("th", label), cell(r.fields[k], gold ? gold[k] : undefined, r.field_errors[k])];
+    if (gold) cells.push(el("td", gold[k]), mark(r.fields[k], gold[k]));
+    tb.append(tr(...cells));
+  }
+  const meta = [];
+  if (state.method === "D") meta.push(["路由", r.fallback ? "已回退到多模态(" + r.route_reasons.join("、") + ")" : "B 直接通过校验,未回退"]);
+  meta.push(["耗时", r.latency_s.toFixed(2) + " 秒(其中 OCR " + r.ocr_latency_s.toFixed(2) + " 秒)"]);
+  meta.push(["token", r.tokens_in ? "输入 " + r.tokens_in + " / 输出 " + r.tokens_out + (r.cost_yuan != null ? ",约 " + r.cost_yuan.toFixed(4) + " 元" : "") : "不调大模型"]);
+  for (const [k, v] of meta) {
+    const td = el("td", v);
+    td.colSpan = gold ? 3 : 1;
+    tb.append(tr(el("th", k), td));
+  }
+  $("result").replaceChildren(tb);
+}
+
+// 四种方案对比:行是字段,列是方案
+function renderCompare(s) {
+  const tb = el("tbody");
+  tb.append(tr(el("th", "字段"), el("th", "标准答案"), ...Object.values(NAMES).map((n) => el("th", n))));
+  for (const [k, label] of Object.entries(LABELS)) {
+    tb.append(tr(el("th", label), el("td", s.gold[k]), ...Object.keys(NAMES).map((m) => {
+      const v = s.results[m].fields[k];
+      const td = mark(v, s.gold[k]);
+      if (v != null && v !== s.gold[k]) td.textContent = "✗ " + v;
+      return td;
+    })));
+  }
+  const all = (m) => Object.keys(LABELS).every((k) => s.results[m].fields[k] === s.gold[k]);
+  tb.append(tr(el("th", "整单"), el("td"), ...Object.keys(NAMES).map((m) => all(m) ? el("td", "全对", "ok") : el("td", "有误", "bad"))));
+  tb.append(tr(el("th", "耗时"), el("td"), ...Object.keys(NAMES).map((m) => el("td", secs(s.results[m].latency_s), "nowrap"))));
+  tb.append(tr(el("th", "成本"), el("td"), ...Object.keys(NAMES).map((m) => el("td", s.results[m].cost_yuan ? s.results[m].cost_yuan.toFixed(4) + " 元" : "0", "nowrap"))));
+  $("result").replaceChildren(tb);
+  $("raw").textContent = JSON.stringify(s.results, null, 2);
+}
+
+function render() {
+  syncUrl();
+  const bar = $("bar");
+  bar.replaceChildren();
+  if (!state.sample && !state.upload) return;
+  const cmp = state.method === "cmp";
+  $("panes").classList.toggle("wide", cmp && !state.upload);
+
+  if (state.upload) {
+    if (cmp) { bar.append(el("span", "上传的图片只能实时运行单个方案,请选 A/B/C/D", "notice")); return; }
+    bar.append(el("span", "你上传的图片 · 实时运行", "tag"), runButton());
+    if (state.live) { renderSingle(state.live); $("raw").textContent = JSON.stringify(state.live, null, 2); }
+    else $("result").replaceChildren(tr(el("td", "点击「运行」开始识别", "muted")));
+    return;
+  }
+
+  const s = state.sample;
+  bar.append(el("span", TEMPLATES[s.template] + " · " + DIFFS[s.difficulty], "tag"));
+  if (cmp) { bar.append(el("span", "测试集真实运行记录", "muted")); renderCompare(s); return; }
+  if (state.live) {
+    bar.append(el("span", "实时重跑结果", "tag"), runButton());
+    renderSingle(state.live, s.gold);
+    $("raw").textContent = JSON.stringify(state.live, null, 2);
+  } else {
+    bar.append(el("span", "测试集真实运行记录", "muted"), runButton());
+    renderSingle(s.results[state.method], s.gold);
+    $("raw").textContent = JSON.stringify(s.results[state.method], null, 2);
+  }
+}
+
+function runButton() {
+  const b = el("button", state.upload ? "运行" : "实时重跑", "btn primary");
+  b.title = "真的调用一次 OCR / 大模型";
+  b.onclick = () => runLive(b);
+  return b;
+}
+
+async function runLive(btn) {
+  const form = new FormData();
+  if (state.upload) form.append("file", state.upload); else form.append("sample_id", state.sample.id);
+  form.append("method", state.method);
+  btn.disabled = true;
+  const t0 = performance.now();
+  const status = el("span", "识别中…A/B/D 要在 CPU 上跑 OCR,约 20~40 秒", "muted");
+  $("bar").append(status);
+  try {
+    const resp = await fetch("/extract", { method: "POST", body: form });
+    const body = await resp.json();
+    if (!resp.ok) {
+      status.textContent = "错误 " + resp.status + ":" + (typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail));
+      status.className = "bad";
+      return;
+    }
+    state.live = body;
+    render();
+    $("bar").append(el("span", "页面总耗时 " + secs((performance.now() - t0) / 1000), "muted"));
+  } catch (err) {
+    status.textContent = "请求失败:" + err;
+    status.className = "bad";
+  } finally {
+    btn.disabled = false;
+  }
+}
 
 $("file").addEventListener("change", () => {
   const f = $("file").files[0];
   if (!f) return;
-  $("preview").src = URL.createObjectURL(f);
-  $("preview").hidden = false;
-  $("nopreview").hidden = true;
+  state.upload = f;
+  state.sample = null;
+  state.live = null;
+  for (const b of document.querySelectorAll(".thumb")) b.classList.remove("on");
+  if (state.method === "cmp") selectMethod("D");
+  showPreview(URL.createObjectURL(f));
+  render();
 });
+for (const b of document.querySelectorAll("#methods button")) b.onclick = () => selectMethod(b.dataset.m);
 
-function row(label, value, cls) {
-  const tr = document.createElement("tr");
-  const th = document.createElement("th");
-  const td = document.createElement("td");
-  th.textContent = label;
-  td.textContent = value;  // 用 textContent,不用 innerHTML:结果里的文字不会被当成 HTML 执行
-  if (cls) td.className = cls;
-  tr.append(th, td);
-  return tr;
-}
-
-function render(body) {
-  const tb = document.createElement("tbody");
-  for (const [k, label] of Object.entries(LABELS)) {
-    const v = body.fields[k];
-    const err = body.field_errors[k];
-    tb.append(row(label, v ?? (err ? "null(" + err + ")" : "null(未找到)"), v == null ? (err ? "err" : "null") : ""));
-  }
-  tb.append(row("所用方案", body.method + (body.fallback ? "(已回退到多模态)" : "")));
-  if (body.route_reasons.length) tb.append(row("回退原因", body.route_reasons.join("、")));
-  tb.append(row("耗时", body.latency_s.toFixed(2) + " 秒(其中 OCR " + body.ocr_latency_s.toFixed(2) + " 秒)"));
-  tb.append(row("token", "输入 " + body.tokens_in + " / 输出 " + body.tokens_out));
-  $("result").replaceChildren(tb);
-}
-
-$("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const data = new FormData();
-  data.append("file", $("file").files[0]);
-  data.append("method", $("method").value);
-  $("submit").disabled = true;
-  $("status").textContent = "识别中…首次 OCR 在 CPU 上约需 20 秒";
-  const t0 = performance.now();
-  try {
-    const resp = await fetch("/extract", { method: "POST", body: data });
-    const body = await resp.json();
-    $("raw").textContent = JSON.stringify(body, null, 2);
-    if (!resp.ok) {
-      $("result").replaceChildren(row("错误 " + resp.status, typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail), "err"));
-      $("status").textContent = "";
-      return;
-    }
-    render(body);
-    $("status").textContent = "完成,页面总耗时 " + ((performance.now() - t0) / 1000).toFixed(1) + " 秒";
-  } catch (err) {
-    $("status").textContent = "请求失败:" + err;
-  } finally {
-    $("submit").disabled = false;
-  }
-});
+(async () => {
+  state.data = await (await fetch("/demo/samples.json")).json();
+  renderStats(state.data.summary, state.data.n_test);
+  renderGallery(state.data.samples);
+  const p = new URLSearchParams(location.search);
+  const m = p.get("m");
+  selectMethod(["A", "B", "C", "D", "cmp"].includes(m) ? m : "D");
+  const s = state.data.samples.find((x) => x.id === p.get("s"));
+  selectSample(s ? s.id : "receipt_occlusion_00");
+})();
 </script>
 </body>
 </html>

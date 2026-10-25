@@ -1,0 +1,2016 @@
+{
+ "run": "20261024_004217_benchmark_test",
+ "n_test": 72,
+ "summary": {
+  "A": {
+   "doc_acc": 0.6944444444444444,
+   "latency_p50": 19.336063050024677,
+   "cost_per_doc": 0.0
+  },
+  "B": {
+   "doc_acc": 0.8333333333333334,
+   "latency_p50": 21.14989660005085,
+   "cost_per_doc": 0.0021901666666666667
+  },
+  "C": {
+   "doc_acc": 0.8472222222222222,
+   "latency_p50": 1.4501023499760777,
+   "cost_per_doc": 0.0022578888888888887
+  },
+  "D": {
+   "doc_acc": 0.9027777777777778,
+   "latency_p50": 21.26201124995714,
+   "cost_per_doc": 0.0023679722222222223
+  }
+ },
+ "samples": [
+  {
+   "id": "receipt_clean_00",
+   "template": "receipt",
+   "difficulty": "clean",
+   "gold": {
+    "payer_name": "恒岳信息技术有限公司",
+    "payee_name": "云帆农业发展(上海)有限公司",
+    "amount": "14685.17",
+    "date": "2026-09-05",
+    "serial_no": "HX20260905297907"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "恒岳信息技术有限公司",
+      "payee_name": "云帆农业发展(上海)有限公司",
+      "amount": "14685.17",
+      "date": "2026-09-05",
+      "serial_no": "HX20260905297907"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 14.96340639994014,
+     "ocr_latency_s": 14.963139800005592,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "恒岳信息技术有限公司",
+      "payee_name": "云帆农业发展(上海)有限公司",
+      "amount": "14685.17",
+      "date": "2026-09-05",
+      "serial_no": "HX20260905297907"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.159595599980094,
+     "ocr_latency_s": 14.963139800005592,
+     "tokens_in": 925,
+     "tokens_out": 128,
+     "cost_yuan": 0.00144
+    },
+    "C": {
+     "fields": {
+      "payer_name": "恒岳信息技术有限公司",
+      "payee_name": "云帆农业发展(上海)有限公司",
+      "amount": "14685.17",
+      "date": "2026-09-05",
+      "serial_no": "HX20260905297907"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 0.9937910999869928,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1096,
+     "tokens_out": 146,
+     "cost_yuan": 0.00168
+    },
+    "D": {
+     "fields": {
+      "payer_name": "恒岳信息技术有限公司",
+      "payee_name": "云帆农业发展(上海)有限公司",
+      "amount": "14685.17",
+      "date": "2026-09-05",
+      "serial_no": "HX20260905297907"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.159595599980094,
+     "ocr_latency_s": 14.963139800005592,
+     "tokens_in": 925,
+     "tokens_out": 128,
+     "cost_yuan": 0.00144
+    }
+   }
+  },
+  {
+   "id": "receipt_blur_00",
+   "template": "receipt",
+   "difficulty": "blur",
+   "gold": {
+    "payer_name": "北辰贸易(武汉)有限公司",
+    "payee_name": "沐阳科技有限公司",
+    "amount": "2438095.06",
+    "date": "2026-03-13",
+    "serial_no": "HX20260313014803"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "北辰贸易(武汉)有限公司",
+      "payee_name": "沐阳科技有限公司",
+      "amount": "2438095.06",
+      "date": "2026-03-13",
+      "serial_no": "HX20260313014803"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 13.474794999929145,
+     "ocr_latency_s": 13.474518799921498,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "北辰贸易(武汉)有限公司",
+      "payee_name": "沐阳科技有限公司",
+      "amount": "2438095.06",
+      "date": "2026-03-13",
+      "serial_no": "HX20260313014803"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 15.582752099842764,
+     "ocr_latency_s": 13.474518799921498,
+     "tokens_in": 930,
+     "tokens_out": 393,
+     "cost_yuan": 0.0025
+    },
+    "C": {
+     "fields": {
+      "payer_name": "北辰贸易(武汉)有限公司",
+      "payee_name": "沐阳科技有限公司",
+      "amount": "2438095.06",
+      "date": "2026-03-13",
+      "serial_no": "HX20260313014803"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.576979599893093,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1096,
+     "tokens_out": 194,
+     "cost_yuan": 0.00187
+    },
+    "D": {
+     "fields": {
+      "payer_name": "北辰贸易(武汉)有限公司",
+      "payee_name": "沐阳科技有限公司",
+      "amount": "2438095.06",
+      "date": "2026-03-13",
+      "serial_no": "HX20260313014803"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 15.582752099842764,
+     "ocr_latency_s": 13.474518799921498,
+     "tokens_in": 930,
+     "tokens_out": 393,
+     "cost_yuan": 0.0025
+    }
+   }
+  },
+  {
+   "id": "receipt_rotate_00",
+   "template": "receipt",
+   "difficulty": "rotate",
+   "gold": {
+    "payer_name": "北辰机械设备(上海)有限公司",
+    "payee_name": "嘉澍物流(成都)有限公司",
+    "amount": "158870.82",
+    "date": "2025-06-04",
+    "serial_no": "HX20250604788264"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "北辰机械设备(上海)有限公司",
+      "payee_name": "嘉澍物流(成都)有限公司",
+      "amount": "158870.82",
+      "date": "2025-06-04",
+      "serial_no": "HX20250604788264"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.381764599937014,
+     "ocr_latency_s": 16.381491799955256,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "北辰机械设备(上海)有限公司",
+      "payee_name": "嘉澍物流(成都)有限公司",
+      "amount": "158870.82",
+      "date": "2025-06-04",
+      "serial_no": "HX20250604788264"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.20068520004861,
+     "ocr_latency_s": 16.381491799955256,
+     "tokens_in": 940,
+     "tokens_out": 309,
+     "cost_yuan": 0.00218
+    },
+    "C": {
+     "fields": {
+      "payer_name": "北辰机械设备(上海)有限公司",
+      "payee_name": "嘉澍物流(成都)有限公司",
+      "amount": "158870.82",
+      "date": "2025-06-04",
+      "serial_no": "HX20250604788264"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.8047174999956042,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1180,
+     "tokens_out": 312,
+     "cost_yuan": 0.00243
+    },
+    "D": {
+     "fields": {
+      "payer_name": "北辰机械设备(上海)有限公司",
+      "payee_name": "嘉澍物流(成都)有限公司",
+      "amount": "158870.82",
+      "date": "2025-06-04",
+      "serial_no": "HX20250604788264"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.20068520004861,
+     "ocr_latency_s": 16.381491799955256,
+     "tokens_in": 940,
+     "tokens_out": 309,
+     "cost_yuan": 0.00218
+    }
+   }
+  },
+  {
+   "id": "receipt_lowres_00",
+   "template": "receipt",
+   "difficulty": "lowres",
+   "gold": {
+    "payer_name": "嘉澍建材(杭州)有限公司",
+    "payee_name": "启明科技有限公司",
+    "amount": "19080.92",
+    "date": "2025-06-05",
+    "serial_no": "HX20250605004327"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "嘉澍建材(杭州)有限公司",
+      "payee_name": "启明科技有限公司",
+      "amount": "19080.92",
+      "date": "2025-06-05",
+      "serial_no": "HX20250605004327"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 13.617976100067608,
+     "ocr_latency_s": 13.61770260008052,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "嘉澍建材(杭州)有限公司",
+      "payee_name": "启明科技有限公司",
+      "amount": "19080.92",
+      "date": "2025-06-05",
+      "serial_no": "HX20250605004327"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 14.858198000118136,
+     "ocr_latency_s": 13.61770260008052,
+     "tokens_in": 922,
+     "tokens_out": 124,
+     "cost_yuan": 0.00142
+    },
+    "C": {
+     "fields": {
+      "payer_name": "嘉澍建材(杭州)有限公司",
+      "payee_name": "启明科技有限公司",
+      "amount": "19080.92",
+      "date": "2025-06-05",
+      "serial_no": "HX20250605004327"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.7491905000060797,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1096,
+     "tokens_out": 195,
+     "cost_yuan": 0.00188
+    },
+    "D": {
+     "fields": {
+      "payer_name": "嘉澍建材(杭州)有限公司",
+      "payee_name": "启明科技有限公司",
+      "amount": "19080.92",
+      "date": "2025-06-05",
+      "serial_no": "HX20250605004327"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 14.858198000118136,
+     "ocr_latency_s": 13.61770260008052,
+     "tokens_in": 922,
+     "tokens_out": 124,
+     "cost_yuan": 0.00142
+    }
+   }
+  },
+  {
+   "id": "receipt_perspective_00",
+   "template": "receipt",
+   "difficulty": "perspective",
+   "gold": {
+    "payer_name": "沐阳医疗器械(苏州)有限公司",
+    "payee_name": "澜川建材(成都)有限公司",
+    "amount": "1035.26",
+    "date": "2026-04-14",
+    "serial_no": "HX20260414073918"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "沐阳医疗器械(苏州)有限公司",
+      "payee_name": "澜川建材(成都)有限公司",
+      "amount": "1035.26",
+      "date": "2026-04-14",
+      "serial_no": "HX20260414073918"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 17.04689919995144,
+     "ocr_latency_s": 17.04660649993457,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "沐阳医疗器械(苏州)有限公司",
+      "payee_name": "澜川建材(成都)有限公司",
+      "amount": "1035.26",
+      "date": "2026-04-14",
+      "serial_no": "HX20260414073918"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.93451469996944,
+     "ocr_latency_s": 17.04660649993457,
+     "tokens_in": 937,
+     "tokens_out": 289,
+     "cost_yuan": 0.00209
+    },
+    "C": {
+     "fields": {
+      "payer_name": "沐阳医疗器械(苏州)有限公司",
+      "payee_name": "澜川建材(成都)有限公司",
+      "amount": "1035.26",
+      "date": "2026-04-14",
+      "serial_no": "HX20260414073918"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.2714013999793679,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1272,
+     "tokens_out": 194,
+     "cost_yuan": 0.00205
+    },
+    "D": {
+     "fields": {
+      "payer_name": "沐阳医疗器械(苏州)有限公司",
+      "payee_name": "澜川建材(成都)有限公司",
+      "amount": "1035.26",
+      "date": "2026-04-14",
+      "serial_no": "HX20260414073918"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.93451469996944,
+     "ocr_latency_s": 17.04660649993457,
+     "tokens_in": 937,
+     "tokens_out": 289,
+     "cost_yuan": 0.00209
+    }
+   }
+  },
+  {
+   "id": "receipt_occlusion_00",
+   "template": "receipt",
+   "difficulty": "occlusion",
+   "gold": {
+    "payer_name": "嘉澍机械设备(杭州)有限公司",
+    "payee_name": "远拓科技(成都)有限公司",
+    "amount": "3266635.41",
+    "date": "2026-09-30",
+    "serial_no": "HX20260930442831"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": null,
+      "payee_name": null,
+      "amount": "3266635.41",
+      "date": "2026-09-30",
+      "serial_no": "HX20260930442831"
+     },
+     "correct": {
+      "payer_name": false,
+      "payee_name": false,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 14.599082099972293,
+     "ocr_latency_s": 14.598747999989428,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": null,
+      "payee_name": null,
+      "amount": "3266635.41",
+      "date": "2026-09-30",
+      "serial_no": "HX20260930442831"
+     },
+     "correct": {
+      "payer_name": false,
+      "payee_name": false,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.4618318999419,
+     "ocr_latency_s": 14.598747999989428,
+     "tokens_in": 936,
+     "tokens_out": 259,
+     "cost_yuan": 0.00197
+    },
+    "C": {
+     "fields": {
+      "payer_name": "嘉澍机械设备(杭州)有限公司",
+      "payee_name": "远拓科技(成都)有限公司",
+      "amount": "3266635.41",
+      "date": "2026-09-30",
+      "serial_no": "HX20260930442831"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.8607837000163272,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1096,
+     "tokens_out": 297,
+     "cost_yuan": 0.00228
+    },
+    "D": {
+     "fields": {
+      "payer_name": "嘉澍机械设备(杭州)有限公司",
+      "payee_name": "远拓科技(成都)有限公司",
+      "amount": "3266635.41",
+      "date": "2026-09-30",
+      "serial_no": "HX20260930442831"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": true,
+     "route_reasons": [
+      "payer_name为空",
+      "payee_name为空"
+     ],
+     "latency_s": 18.322615599958226,
+     "ocr_latency_s": 14.598747999989428,
+     "tokens_in": 2032,
+     "tokens_out": 556,
+     "cost_yuan": 0.00426
+    }
+   }
+  },
+  {
+   "id": "invoice_clean_00",
+   "template": "invoice",
+   "difficulty": "clean",
+   "gold": {
+    "payer_name": "朗峰贸易有限公司",
+    "payee_name": "沐阳贸易(上海)有限公司",
+    "amount": "120290.64",
+    "date": "2025-04-11",
+    "serial_no": "48900527816318042320"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "朗峰贸易有限公司",
+      "payee_name": "沐阳贸易(上海)有限公司",
+      "amount": "120290.64",
+      "date": "2025-04-11",
+      "serial_no": "48900527816318042320"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 19.406776100047864,
+     "ocr_latency_s": 19.40627580008004,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "朗峰贸易有限公司",
+      "payee_name": "沐阳贸易(上海)有限公司",
+      "amount": "120290.64",
+      "date": "2025-04-11",
+      "serial_no": "48900527816318042320"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 21.116036100080237,
+     "ocr_latency_s": 19.40627580008004,
+     "tokens_in": 991,
+     "tokens_out": 281,
+     "cost_yuan": 0.00212
+    },
+    "C": {
+     "fields": {
+      "payer_name": "朗峰贸易有限公司",
+      "payee_name": "沐阳贸易(上海)有限公司",
+      "amount": "120290.64",
+      "date": "2025-04-11",
+      "serial_no": "48900527816318042320"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.3665420000907034,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1225,
+     "tokens_out": 196,
+     "cost_yuan": 0.00201
+    },
+    "D": {
+     "fields": {
+      "payer_name": "朗峰贸易有限公司",
+      "payee_name": "沐阳贸易(上海)有限公司",
+      "amount": "120290.64",
+      "date": "2025-04-11",
+      "serial_no": "48900527816318042320"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 21.116036100080237,
+     "ocr_latency_s": 19.40627580008004,
+     "tokens_in": 991,
+     "tokens_out": 281,
+     "cost_yuan": 0.00212
+    }
+   }
+  },
+  {
+   "id": "invoice_blur_00",
+   "template": "invoice",
+   "difficulty": "blur",
+   "gold": {
+    "payer_name": "澜川物流有限公司",
+    "payee_name": "澜川餐饮管理(成都)有限公司",
+    "amount": "3313805.85",
+    "date": "2026-07-17",
+    "serial_no": "35870897935485905905"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "澜川物流有限公司",
+      "payee_name": "澜川餐饮管理(成都)有限公司",
+      "amount": null,
+      "date": "2026-07-17",
+      "serial_no": "35870897935485905905"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": false,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {
+      "amount": "无法解析的金额: '¥3.313,805.85'"
+     },
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.86418490007054,
+     "ocr_latency_s": 16.863639899995178,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "澜川物流有限公司",
+      "payee_name": "澜川餐饮管理(成都)有限公司",
+      "amount": "3313805.85",
+      "date": "2026-07-17",
+      "serial_no": "35870897935485905905"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.656964200083166,
+     "ocr_latency_s": 16.863639899995178,
+     "tokens_in": 973,
+     "tokens_out": 227,
+     "cost_yuan": 0.00188
+    },
+    "C": {
+     "fields": {
+      "payer_name": "澜川物流有限公司",
+      "payee_name": "澜川餐饮管理(成都)有限公司",
+      "amount": "3313805.85",
+      "date": "2026-07-17",
+      "serial_no": "3587097935485905905"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": false
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 2.405889199930243,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1225,
+     "tokens_out": 461,
+     "cost_yuan": 0.00307
+    },
+    "D": {
+     "fields": {
+      "payer_name": "澜川物流有限公司",
+      "payee_name": "澜川餐饮管理(成都)有限公司",
+      "amount": "3313805.85",
+      "date": "2026-07-17",
+      "serial_no": "35870897935485905905"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 18.656964200083166,
+     "ocr_latency_s": 16.863639899995178,
+     "tokens_in": 973,
+     "tokens_out": 227,
+     "cost_yuan": 0.00188
+    }
+   }
+  },
+  {
+   "id": "invoice_rotate_00",
+   "template": "invoice",
+   "difficulty": "rotate",
+   "gold": {
+    "payer_name": "远拓建材有限公司",
+    "payee_name": "恒岳医疗器械(武汉)有限公司",
+    "amount": "16.97",
+    "date": "2025-11-05",
+    "serial_no": "90267444934580636087"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "远拓建材有限公司",
+      "payee_name": "恒岳医疗器械(武汉)有限公司",
+      "amount": "16.97",
+      "date": "2025-11-05",
+      "serial_no": "90267444934580636087"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 21.208711199928075,
+     "ocr_latency_s": 21.208312000031583,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "远拓建材有限公司",
+      "payee_name": "恒岳医疗器械(武汉)有限公司",
+      "amount": "16.97",
+      "date": "2025-11-05",
+      "serial_no": "90267444934580636087"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.635759499971755,
+     "ocr_latency_s": 21.208312000031583,
+     "tokens_in": 943,
+     "tokens_out": 181,
+     "cost_yuan": 0.00167
+    },
+    "C": {
+     "fields": {
+      "payer_name": "远拓建材有限公司",
+      "payee_name": "恒岳医疗器械(武汉)有限公司",
+      "amount": "16.97",
+      "date": "2025-11-05",
+      "serial_no": "90267444934580636087"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 2.0518846000777557,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1381,
+     "tokens_out": 274,
+     "cost_yuan": 0.00248
+    },
+    "D": {
+     "fields": {
+      "payer_name": "远拓建材有限公司",
+      "payee_name": "恒岳医疗器械(武汉)有限公司",
+      "amount": "16.97",
+      "date": "2025-11-05",
+      "serial_no": "90267444934580636087"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.635759499971755,
+     "ocr_latency_s": 21.208312000031583,
+     "tokens_in": 943,
+     "tokens_out": 181,
+     "cost_yuan": 0.00167
+    }
+   }
+  },
+  {
+   "id": "invoice_lowres_00",
+   "template": "invoice",
+   "difficulty": "lowres",
+   "gold": {
+    "payer_name": "嘉澍科技有限公司",
+    "payee_name": "云帆物流有限公司",
+    "amount": "12.67",
+    "date": "2024-10-24",
+    "serial_no": "38839568857582022883"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "嘉澍科技有限公司",
+      "payee_name": "云帆物流有限公司",
+      "amount": "12.67",
+      "date": "2024-10-24",
+      "serial_no": "38839568857582022883"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 16.826266000047326,
+     "ocr_latency_s": 16.825701600057073,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "嘉澍科技有限公司",
+      "payee_name": "云帆物流有限公司",
+      "amount": "12.67",
+      "date": "2024-10-24",
+      "serial_no": "38839568857582022883"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 17.983736800029874,
+     "ocr_latency_s": 16.825701600057073,
+     "tokens_in": 943,
+     "tokens_out": 143,
+     "cost_yuan": 0.00152
+    },
+    "C": {
+     "fields": {
+      "payer_name": "嘉澍科技有限公司",
+      "payee_name": "云帆物流有限公司",
+      "amount": "12.67",
+      "date": "2024-10-24",
+      "serial_no": "38839568857582022883"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.822946299915202,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1225,
+     "tokens_out": 288,
+     "cost_yuan": 0.00238
+    },
+    "D": {
+     "fields": {
+      "payer_name": "嘉澍科技有限公司",
+      "payee_name": "云帆物流有限公司",
+      "amount": "12.67",
+      "date": "2024-10-24",
+      "serial_no": "38839568857582022883"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 17.983736800029874,
+     "ocr_latency_s": 16.825701600057073,
+     "tokens_in": 943,
+     "tokens_out": 143,
+     "cost_yuan": 0.00152
+    }
+   }
+  },
+  {
+   "id": "invoice_perspective_00",
+   "template": "invoice",
+   "difficulty": "perspective",
+   "gold": {
+    "payer_name": "恒岳农业发展(杭州)有限公司",
+    "payee_name": "澜川贸易有限公司",
+    "amount": "857.31",
+    "date": "2025-09-04",
+    "serial_no": "73683712379346929419"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "恒岳农业发展(杭州)有限公司",
+      "payee_name": "澜川贸易有限公司",
+      "amount": "857.31",
+      "date": "2025-09-04",
+      "serial_no": "73683712379346929419"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 20.760706400033087,
+     "ocr_latency_s": 20.760296300053596,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "恒岳农业发展(杭州)有限公司",
+      "payee_name": "澜川贸易有限公司",
+      "amount": "857.31",
+      "date": "2025-09-04",
+      "serial_no": "73683712379346929419"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.25064340000972,
+     "ocr_latency_s": 20.760296300053596,
+     "tokens_in": 956,
+     "tokens_out": 171,
+     "cost_yuan": 0.00164
+    },
+    "C": {
+     "fields": {
+      "payer_name": "恒岳农业发展(杭州)有限公司",
+      "payee_name": "澜川贸易有限公司",
+      "amount": "857.31",
+      "date": "2025-09-04",
+      "serial_no": "73683712379346929419"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.2202371000312269,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1425,
+     "tokens_out": 161,
+     "cost_yuan": 0.00207
+    },
+    "D": {
+     "fields": {
+      "payer_name": "恒岳农业发展(杭州)有限公司",
+      "payee_name": "澜川贸易有限公司",
+      "amount": "857.31",
+      "date": "2025-09-04",
+      "serial_no": "73683712379346929419"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.25064340000972,
+     "ocr_latency_s": 20.760296300053596,
+     "tokens_in": 956,
+     "tokens_out": 171,
+     "cost_yuan": 0.00164
+    }
+   }
+  },
+  {
+   "id": "invoice_occlusion_00",
+   "template": "invoice",
+   "difficulty": "occlusion",
+   "gold": {
+    "payer_name": "青禾医疗器械(北京)有限公司",
+    "payee_name": "星河科技(苏州)有限公司",
+    "amount": "6.09",
+    "date": "2026-05-02",
+    "serial_no": "85328150830608884872"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "青禾医疗器械(北京)有限公司",
+      "payee_name": "星河科技(苏州)有限公司",
+      "amount": null,
+      "date": null,
+      "serial_no": "85328150830608884872"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": false,
+      "date": false,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 17.187488599913195,
+     "ocr_latency_s": 17.187010499997996,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "青禾医疗器械(北京)有限公司",
+      "payee_name": "星河科技(苏州)有限公司",
+      "amount": null,
+      "date": null,
+      "serial_no": "85328150830608884872"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": false,
+      "date": false,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 20.58282470004633,
+     "ocr_latency_s": 17.187010499997996,
+     "tokens_in": 920,
+     "tokens_out": 635,
+     "cost_yuan": 0.00346
+    },
+    "C": {
+     "fields": {
+      "payer_name": "青禾医疗器械(北京)有限公司",
+      "payee_name": "星河科技(苏州)有限公司",
+      "amount": "6.09",
+      "date": "2026-05-02",
+      "serial_no": "85328150830608884872"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.5098001000005752,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1225,
+     "tokens_out": 204,
+     "cost_yuan": 0.00204
+    },
+    "D": {
+     "fields": {
+      "payer_name": "青禾医疗器械(北京)有限公司",
+      "payee_name": "星河科技(苏州)有限公司",
+      "amount": "6.09",
+      "date": "2026-05-02",
+      "serial_no": "85328150830608884872"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": true,
+     "route_reasons": [
+      "amount为空",
+      "date为空"
+     ],
+     "latency_s": 22.092624800046906,
+     "ocr_latency_s": 17.187010499997996,
+     "tokens_in": 2145,
+     "tokens_out": 839,
+     "cost_yuan": 0.0055
+    }
+   }
+  },
+  {
+   "id": "statement_clean_00",
+   "template": "statement",
+   "difficulty": "clean",
+   "gold": {
+    "payer_name": "沐阳农业发展有限公司",
+    "payee_name": null,
+    "amount": "1.43",
+    "date": "2025-02-11",
+    "serial_no": "DZ202502140623"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "沐阳农业发展有限公司",
+      "payee_name": null,
+      "amount": "1.43",
+      "date": "2025-02-11",
+      "serial_no": "DZ202502140623"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 23.66269780008588,
+     "ocr_latency_s": 23.662000500014983,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "沐阳农业发展有限公司",
+      "payee_name": null,
+      "amount": "1.43",
+      "date": "2025-02-11",
+      "serial_no": "DZ202502140623"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 24.833361000055447,
+     "ocr_latency_s": 23.662000500014983,
+     "tokens_in": 984,
+     "tokens_out": 125,
+     "cost_yuan": 0.00148
+    },
+    "C": {
+     "fields": {
+      "payer_name": "沐阳农业发展有限公司",
+      "payee_name": null,
+      "amount": "1.43",
+      "date": "2025-02-11",
+      "serial_no": "DZ202502140623"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.2185676998924464,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1246,
+     "tokens_out": 164,
+     "cost_yuan": 0.0019
+    },
+    "D": {
+     "fields": {
+      "payer_name": "沐阳农业发展有限公司",
+      "payee_name": null,
+      "amount": "1.43",
+      "date": "2025-02-11",
+      "serial_no": "DZ202502140623"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 24.833361000055447,
+     "ocr_latency_s": 23.662000500014983,
+     "tokens_in": 984,
+     "tokens_out": 125,
+     "cost_yuan": 0.00148
+    }
+   }
+  },
+  {
+   "id": "statement_blur_00",
+   "template": "statement",
+   "difficulty": "blur",
+   "gold": {
+    "payer_name": "锦程文化传媒有限公司",
+    "payee_name": null,
+    "amount": "4807006.88",
+    "date": "2024-03-23",
+    "serial_no": "DZ202403768752"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "锦程文化传媒有限公司",
+      "payee_name": null,
+      "amount": "4807006.88",
+      "date": null,
+      "serial_no": "DZ202403768752"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": false,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.856744299991988,
+     "ocr_latency_s": 22.85599640000146,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "锦程文化传媒有限公司",
+      "payee_name": null,
+      "amount": "4807006.88",
+      "date": "2024-03-23",
+      "serial_no": "DZ202403768752"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 24.066960399970412,
+     "ocr_latency_s": 22.85599640000146,
+     "tokens_in": 1047,
+     "tokens_out": 185,
+     "cost_yuan": 0.00179
+    },
+    "C": {
+     "fields": {
+      "payer_name": "锦程文化传媒有限公司",
+      "payee_name": null,
+      "amount": "4807006.88",
+      "date": "2024-03-23",
+      "serial_no": "DZ202403768752"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 0.9068435999797657,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1246,
+     "tokens_out": 129,
+     "cost_yuan": 0.00176
+    },
+    "D": {
+     "fields": {
+      "payer_name": "锦程文化传媒有限公司",
+      "payee_name": null,
+      "amount": "4807006.88",
+      "date": "2024-03-23",
+      "serial_no": "DZ202403768752"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 24.066960399970412,
+     "ocr_latency_s": 22.85599640000146,
+     "tokens_in": 1047,
+     "tokens_out": 185,
+     "cost_yuan": 0.00179
+    }
+   }
+  },
+  {
+   "id": "statement_rotate_00",
+   "template": "statement",
+   "difficulty": "rotate",
+   "gold": {
+    "payer_name": "云帆贸易有限公司",
+    "payee_name": null,
+    "amount": "5.78",
+    "date": "2026-03-15",
+    "serial_no": "DZ202603841805"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "云帆贸易有限公司",
+      "payee_name": null,
+      "amount": null,
+      "date": "2026-03-15",
+      "serial_no": "DZ202603841805"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": false,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 25.411356700002216,
+     "ocr_latency_s": 25.410683699999936,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "云帆贸易有限公司",
+      "payee_name": null,
+      "amount": "5.78",
+      "date": "2026-03-15",
+      "serial_no": "DZ202603841805"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 26.79978859995026,
+     "ocr_latency_s": 25.410683699999936,
+     "tokens_in": 981,
+     "tokens_out": 181,
+     "cost_yuan": 0.0017
+    },
+    "C": {
+     "fields": {
+      "payer_name": "云帆贸易有限公司",
+      "payee_name": null,
+      "amount": "5.78",
+      "date": "2026-03-15",
+      "serial_no": "DZ202603841805"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.331360699958168,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1475,
+     "tokens_out": 195,
+     "cost_yuan": 0.00226
+    },
+    "D": {
+     "fields": {
+      "payer_name": "云帆贸易有限公司",
+      "payee_name": null,
+      "amount": "5.78",
+      "date": "2026-03-15",
+      "serial_no": "DZ202603841805"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 26.79978859995026,
+     "ocr_latency_s": 25.410683699999936,
+     "tokens_in": 981,
+     "tokens_out": 181,
+     "cost_yuan": 0.0017
+    }
+   }
+  },
+  {
+   "id": "statement_lowres_00",
+   "template": "statement",
+   "difficulty": "lowres",
+   "gold": {
+    "payer_name": "恒岳餐饮管理有限公司",
+    "payee_name": null,
+    "amount": "380990.42",
+    "date": "2025-03-10",
+    "serial_no": "DZ202503443206"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "恒岳餐饮管理有限公司",
+      "payee_name": null,
+      "amount": "380990.42",
+      "date": "2025-03-10",
+      "serial_no": "DZ202503443206"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 20.321387200034223,
+     "ocr_latency_s": 20.320759700029157,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "恒岳餐饮管理有限公司",
+      "payee_name": null,
+      "amount": "380990.42",
+      "date": "2025-03-10",
+      "serial_no": "DZ202503443206"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 21.183757100021467,
+     "ocr_latency_s": 20.320759700029157,
+     "tokens_in": 977,
+     "tokens_out": 143,
+     "cost_yuan": 0.00155
+    },
+    "C": {
+     "fields": {
+      "payer_name": "恒岳餐饮管理有限公司",
+      "payee_name": null,
+      "amount": "380990.42",
+      "date": "2025-03-10",
+      "serial_no": "DZ202503443206"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.0411505000665784,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1246,
+     "tokens_out": 158,
+     "cost_yuan": 0.00188
+    },
+    "D": {
+     "fields": {
+      "payer_name": "恒岳餐饮管理有限公司",
+      "payee_name": null,
+      "amount": "380990.42",
+      "date": "2025-03-10",
+      "serial_no": "DZ202503443206"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 21.183757100021467,
+     "ocr_latency_s": 20.320759700029157,
+     "tokens_in": 977,
+     "tokens_out": 143,
+     "cost_yuan": 0.00155
+    }
+   }
+  },
+  {
+   "id": "statement_perspective_00",
+   "template": "statement",
+   "difficulty": "perspective",
+   "gold": {
+    "payer_name": "启明机械设备(苏州)有限公司",
+    "payee_name": null,
+    "amount": "177532.37",
+    "date": "2024-12-02",
+    "serial_no": "DZ202412873033"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "启明机械设备(苏州)有限公司",
+      "payee_name": null,
+      "amount": "177532.37",
+      "date": "2024-12-02",
+      "serial_no": "DZ202412873033"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 27.92009409982711,
+     "ocr_latency_s": 27.919250699924305,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "启明机械设备(苏州)有限公司",
+      "payee_name": null,
+      "amount": "177532.37",
+      "date": "2024-12-02",
+      "serial_no": "DZ202412873033"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 29.51349379995372,
+     "ocr_latency_s": 27.919250699924305,
+     "tokens_in": 1044,
+     "tokens_out": 217,
+     "cost_yuan": 0.00191
+    },
+    "C": {
+     "fields": {
+      "payer_name": "启明机械设备(苏州)有限公司",
+      "payee_name": null,
+      "amount": "177532.37",
+      "date": "2024-12-02",
+      "serial_no": "DZ202412873033"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.13330240000505,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1446,
+     "tokens_out": 184,
+     "cost_yuan": 0.00218
+    },
+    "D": {
+     "fields": {
+      "payer_name": "启明机械设备(苏州)有限公司",
+      "payee_name": null,
+      "amount": "177532.37",
+      "date": "2024-12-02",
+      "serial_no": "DZ202412873033"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 29.51349379995372,
+     "ocr_latency_s": 27.919250699924305,
+     "tokens_in": 1044,
+     "tokens_out": 217,
+     "cost_yuan": 0.00191
+    }
+   }
+  },
+  {
+   "id": "statement_occlusion_00",
+   "template": "statement",
+   "difficulty": "occlusion",
+   "gold": {
+    "payer_name": "远拓文化传媒(北京)有限公司",
+    "payee_name": null,
+    "amount": "1176313.43",
+    "date": "2024-04-14",
+    "serial_no": "DZ202404197366"
+   },
+   "results": {
+    "A": {
+     "fields": {
+      "payer_name": "远拓文化传媒(北京)有限公司",
+      "payee_name": null,
+      "amount": "1176313.43",
+      "date": null,
+      "serial_no": "DZ202404197366"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": false,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 22.540761500014924,
+     "ocr_latency_s": 22.540018299943767,
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "cost_yuan": 0.0
+    },
+    "B": {
+     "fields": {
+      "payer_name": "远拓文化传媒(北京)有限公司",
+      "payee_name": null,
+      "amount": "1176313.43",
+      "date": "2024-04-14",
+      "serial_no": "DZ202404197366"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 23.954489199910313,
+     "ocr_latency_s": 22.540018299943767,
+     "tokens_in": 1021,
+     "tokens_out": 184,
+     "cost_yuan": 0.00176
+    },
+    "C": {
+     "fields": {
+      "payer_name": "远拓文化传媒(北京)有限公司",
+      "payee_name": null,
+      "amount": "1176313.43",
+      "date": "2024-04-14",
+      "serial_no": "DZ202404197366"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 1.4433099000016227,
+     "ocr_latency_s": 0.0,
+     "tokens_in": 1246,
+     "tokens_out": 219,
+     "cost_yuan": 0.00212
+    },
+    "D": {
+     "fields": {
+      "payer_name": "远拓文化传媒(北京)有限公司",
+      "payee_name": null,
+      "amount": "1176313.43",
+      "date": "2024-04-14",
+      "serial_no": "DZ202404197366"
+     },
+     "correct": {
+      "payer_name": true,
+      "payee_name": true,
+      "amount": true,
+      "date": true,
+      "serial_no": true
+     },
+     "field_errors": {},
+     "fallback": false,
+     "route_reasons": [],
+     "latency_s": 23.954489199910313,
+     "ocr_latency_s": 22.540018299943767,
+     "tokens_in": 1021,
+     "tokens_out": 184,
+     "cost_yuan": 0.00176
+    }
+   }
+  }
+ ]
+}
