@@ -20,6 +20,7 @@ if has tunnel; then
   echo "!! DNS 记录 ocr.wyphub.com 需要去 Cloudflare 面板手动删除(cloudflared 不会自动删)"
   rm -rf /etc/cloudflared /root/.cloudflared
   apt-get purge -y cloudflared >/dev/null 2>&1 && echo "cloudflared 已卸载"
+  rm -f /etc/apt/sources.list.d/cloudflared.list /usr/share/keyrings/cloudflare-main.gpg  # 部署时加的 apt 源
 fi
 
 echo "== 3. 删除代码、密钥、依赖和模型"
