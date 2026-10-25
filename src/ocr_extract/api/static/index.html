@@ -79,7 +79,7 @@
     <div class="gallery" id="gallery"></div>
     <div class="muted" style="margin-top:6px">每个"类型 × 形态"按固定规则取编号 00 的那张,不按结果挑选;下方显示的是它在测试集上的真实运行记录。</div>
     <div class="upload">
-      <span class="muted">或上传自己的图(PNG/JPEG,≤5MB,实时调用,约 20~40 秒):</span>
+      <span class="muted">或上传自己的图(PNG/JPEG,≤5MB,实时调用,新图首次约 30 秒):</span>
       <input type="file" id="file" accept="image/png,image/jpeg">
     </div>
   </div>
@@ -93,6 +93,7 @@
       <button data-m="D">D 融合路由</button>
       <button data-m="cmp">四种方案对比</button>
     </div>
+    <div class="muted" style="margin-top:8px">实时调用耗时:A/B/D 要先在服务器 CPU 上跑 PaddleOCR,<b>每张新图第一次约 30 秒</b>;同一张图的 OCR 结果会缓存,再次运行或换成 A/B/D 里的其他方案只需几秒。C 不经过 OCR,约 3~10 秒。点样本默认显示测试集记录,不需要等待。</div>
   </div>
 
   <div class="grid" id="panes">
@@ -289,7 +290,8 @@ async function runLive(btn) {
   form.append("method", state.method);
   btn.disabled = true;
   const t0 = performance.now();
-  const status = el("span", "识别中…A/B/D 要在 CPU 上跑 OCR,约 20~40 秒", "muted");
+  const status = el("span", state.method === "C" ? "识别中…多模态直接看图,约 3~10 秒"
+    : "识别中…新图要先在 CPU 上跑 OCR,首次约 30 秒;跑过的图几秒即可", "muted");
   $("bar").append(status);
   try {
     const resp = await fetch("/extract", { method: "POST", body: form });
