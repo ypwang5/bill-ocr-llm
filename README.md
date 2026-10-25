@@ -2,6 +2,8 @@
 
 从银行票据图片(转账回单、发票、对账单)中抽取 **付款人、收款人、金额、日期、编号** 5 个字段,输出结构化 JSON。对比四种方案,并做成 FastAPI 接口和网页。
 
+**在线演示:<https://ocr.wyphub.com>**(内置 18 张样本可直接点选;部署与下线见 [docs/deploy.md](docs/deploy.md))
+
 > 全部样本为脚本合成,使用虚构的公司名和账号,不含任何真实个人或银行数据。
 
 | 单个方案:逐字段对照标准答案(D 在遮挡件上回退到多模态) | 四种方案对比:同一张模糊发票 |
@@ -31,7 +33,7 @@
 需要:Windows / Linux / macOS,[uv](https://docs.astral.sh/uv/)。Python 3.11 由 uv 自动下载。
 
 ```bash
-git clone <仓库地址> && cd OCR
+git clone https://github.com/ypwang5/bill-ocr-llm.git && cd bill-ocr-llm
 uv sync                       # 安装依赖(含 PaddleOCR CPU 版,首次约 3~5 分钟)
 ```
 
@@ -122,4 +124,4 @@ uv run python -m ocr_extract.eval.run_benchmark --methods A,B,C --set test      
 
 ## 文档
 
-[实验报告](docs/experiment-report.md) · [架构](docs/architecture.md) · [技术决策](docs/decisions.md) · [面试问答](docs/interview-qa.md) · [学习日志](docs/learning-log.md) · [开发流程](docs/process.md)
+[实验报告](docs/experiment-report.md) · [架构](docs/architecture.md) · [技术决策](docs/decisions.md) · [面试问答](docs/interview-qa.md) · [开发流程](docs/process.md) · [部署与下线](docs/deploy.md)

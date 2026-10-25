@@ -1,0 +1,21 @@
+[Unit]
+Description=bill-ocr-llm 票据抽取演示(FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ocr
+WorkingDirectory=/opt/bill-ocr
+Environment=PYTHONIOENCODING=utf-8
+# 只听本机端口,公网入口是 Cloudflare Tunnel,不开放任何新端口
+ExecStart=/opt/bill-ocr/.venv/bin/uvicorn ocr_extract.api.main:app --host 127.0.0.1 --port 8090
+Restart=on-failure
+RestartSec=10
+# 这台机器还跑着 VPN 等服务:OCR 吃满 CPU 时让它们优先,内存超限只杀本服务
+Nice=10
+CPUWeight=20
+MemoryMax=2500M
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
